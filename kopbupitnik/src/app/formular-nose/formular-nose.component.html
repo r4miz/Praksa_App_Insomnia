@@ -1,0 +1,142 @@
+<div class="ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <div class="box">
+        <p-card>
+          <p-header>
+            <div class="heading">
+              Nasal Obstruction Symptom Evaluation (NOSE) Instrument
+            </div>
+          </p-header>
+          <form class="form-formular" style="font-size: 95%;">
+            <hr class="pb-2" style="margin-top: -0.3rem;">
+            <div class="ui-g form-body">
+              <div class="ui-g-10 p-offset-1">
+                <p class="pt-2 pb-1">
+                  Tijekom <strong>posljednjih mjesec</strong> dana, koliki problem su bila sljedeća stanja za Vas?
+                  Zaokružite odgovor koji najbolje odgovara.</p>
+                <div>
+                  Bolujete li od alergijskog rinitisa?
+                  <p-radioButton name="alergijskiRinitis" value="1" label="DA" [(ngModel)]="alergijskiRinitis"
+                    class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="alergijskiRinitis" value="0" label="NE" [(ngModel)]="alergijskiRinitis">
+                  </p-radioButton>
+                </div>
+                <div>
+                  Jeste li operirali nos (septum, polipi)?
+                  <p-radioButton name="operiraliNos" value="1" label="DA" [(ngModel)]="operiraliNos" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="operiraliNos" value="0" label="NE" [(ngModel)]="operiraliNos">
+                  </p-radioButton>
+                </div>
+              </div>
+            </div>
+            <hr class="pb-2" style="margin-top: 0rem;">
+            <div class="ui-g form-body">
+              <div class="ui-g-10 p-offset-1">
+                <div class="ui-g-12">
+                  <div id="N1" class="pb-3">
+                    <p class="question pb-1"><strong>1. </strong>Nosna kongestija ili punoća</p>
+                    Nije problem
+                    <p-radioButton name="N1" value="0" label="0" [(ngModel)]="N1" class="mr-3">
+                    </p-radioButton>
+                    Vrlo blagi problem
+                    <p-radioButton name="N1" value="1" label="1" [(ngModel)]="N1" class="mr-3">
+                    </p-radioButton>
+                    Umjereni problem
+                    <p-radioButton name="N1" value="2" label="2" [(ngModel)]="N1" class="mr-3">
+                    </p-radioButton>
+                    Prilično težak problem
+                    <p-radioButton name="N1" value="3" label="3" [(ngModel)]="N1" class="mr-3">
+                    </p-radioButton>
+                    Težak problem
+                    <p-radioButton name="N1" value="4" label="4" [(ngModel)]="N1">
+                    </p-radioButton>
+                  </div>
+
+                  <div id="N2" class="pb-3">
+                    <p class="question pb-1"><strong>2. </strong>Nosna blokada ili opstrukcija (začepljenost) </p>
+                    Nije problem
+                    <p-radioButton name="N2" value="0" label="0" [(ngModel)]="N2" class="mr-3">
+                    </p-radioButton>
+                    Vrlo blagi problem
+                    <p-radioButton name="N2" value="1" label="1" [(ngModel)]="N2" class="mr-3">
+                    </p-radioButton>
+                    Umjereni problem
+                    <p-radioButton name="N2" value="2" label="2" [(ngModel)]="N2" class="mr-3">
+                    </p-radioButton>
+                    Prilično težak problem
+                    <p-radioButton name="N2" value="3" label="3" [(ngModel)]="N2" class="mr-3">
+                    </p-radioButton>
+                    Težak problem
+                    <p-radioButton name="N2" value="4" label="4" [(ngModel)]="N2">
+                    </p-radioButton>
+                  </div>
+                  <div id="N3" class="pb-3">
+                    <p class="question pb-1"><strong>3. </strong>Otežano disanje kroz nos</p>
+                    Nije problem
+                    <p-radioButton name="N3" value="0" label="0" [(ngModel)]="N3" class="mr-3">
+                    </p-radioButton>
+                    Vrlo blagi problem
+                    <p-radioButton name="N3" value="1" label="1" [(ngModel)]="N3" class="mr-3">
+                    </p-radioButton>
+                    Umjereni problem
+                    <p-radioButton name="N3" value="2" label="2" [(ngModel)]="N3" class="mr-3">
+                    </p-radioButton>
+                    Prilično težak problem
+                    <p-radioButton name="N3" value="3" label="3" [(ngModel)]="N3" class="mr-3">
+                    </p-radioButton>
+                    Težak problem
+                    <p-radioButton name="N3" value="4" label="4" [(ngModel)]="N3">
+                    </p-radioButton>
+                  </div>
+                  <div id="N4" class="pb-3">
+                    <p class="question pb-1"><strong>4. </strong>Otežano spavanje</p>
+                    Nije problem
+                    <p-radioButton name="N4" value="0" label="0" [(ngModel)]="N4" class="mr-3">
+                    </p-radioButton>
+                    Vrlo blagi problem
+                    <p-radioButton name="N4" value="1" label="1" [(ngModel)]="N4" class="mr-3">
+                    </p-radioButton>
+                    Umjereni problem
+                    <p-radioButton name="N4" value="2" label="2" [(ngModel)]="N4" class="mr-3">
+                    </p-radioButton>
+                    Prilično težak problem
+                    <p-radioButton name="N4" value="3" label="3" [(ngModel)]="N4" class="mr-3">
+                    </p-radioButton>
+                    Težak problem
+                    <p-radioButton name="N4" value="4" label="4" [(ngModel)]="N4">
+                    </p-radioButton>
+                  </div>
+                  <div id="N5" class="pb-3">
+                    <p class="question pb-1"><strong>5. </strong>Nemogućnost dobivanja dovoljno zraka kroz nos tijekom
+                      vježbanja ili napora</p>
+                    Nije problem
+                    <p-radioButton name="N5" value="0" label="0" [(ngModel)]="N5" class="mr-3">
+                    </p-radioButton>
+                    Vrlo blagi problem
+                    <p-radioButton name="N5" value="1" label="1" [(ngModel)]="N3" class="mr-3">
+                    </p-radioButton>
+                    Umjereni problem
+                    <p-radioButton name="N5" value="2" label="2" [(ngModel)]="N5" class="mr-3">
+                    </p-radioButton>
+                    Prilično težak problem
+                    <p-radioButton name="N5" value="3" label="3" [(ngModel)]="N5" class="mr-3">
+                    </p-radioButton>
+                    Težak problem
+                    <p-radioButton name="N5" value="4" label="4" [(ngModel)]="N5">
+                    </p-radioButton>
+                  </div>
+                  <button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
+                    class="ui-button-raised ui-button-rounded ui-button-success"></button>
+
+                </div>
+              </div>
+            </div>
+          </form>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

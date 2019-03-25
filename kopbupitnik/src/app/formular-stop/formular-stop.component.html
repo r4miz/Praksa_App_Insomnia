@@ -1,0 +1,184 @@
+<div class="ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <div class="box">
+        <p-card>
+          <p-header>
+            <div class="heading">
+              STOP upitnik
+            </div>
+          </p-header>
+          <form class="form-formular">
+            <hr style="margin-top: -0.5rem;" class="pb-3">
+            <div class="ui-g form-body">
+              <div class="ui-g-4">
+
+
+                <div class="pb-3">
+                  <span class="ui-inputgroup-addon"><i>Visina u cm</i></span>
+                  <p-spinner placeholder="Vaša visina" name="visina" size="30" [(ngModel)]="visina" [min]="0"
+                    [max]="250">
+                  </p-spinner>
+                </div>
+                <div class="pb-3">
+                  <span class="ui-inputgroup-addon"><i>Godine</i></span>
+                  <p-spinner placeholder="Vaša dob" name="dob" size="30" [(ngModel)]="dob" [min]="0" [max]="250">
+                  </p-spinner>
+                </div>
+                <div>
+                  <span class="ui-inputgroup-addon"><i>Opseg vrata u cm</i></span>
+                  <p-spinner placeholder="Vaš opseg vrata" name="opsegVrata" size="30" [(ngModel)]="opsegVrata"
+                    [min]="5" [max]="30">
+                  </p-spinner>
+                </div>
+              </div>
+              <div class="ui-g-4">
+
+
+                <div class="pb-3">
+                  <span class="ui-inputgroup-addon"><i>Opseg bokova u cm</i></span>
+                  <p-spinner placeholder="Vaš opseg bokova" name="opsegBokova" size="30" [(ngModel)]="opsegBokova"
+                    [min]="5" [max]="150">
+                  </p-spinner>
+                </div>
+                <div class="pb-3">
+                  <span class="ui-inputgroup-addon"><i>Kilaža u kg</i></span>
+                  <p-spinner placeholder="Vaša kilaža" name="tjelesnaMasa" size="30" [(ngModel)]="tjelesnaMasa">
+                  </p-spinner>
+                </div>
+                <div>
+                  <span class="ui-inputgroup-addon"><i>Veličina ovratnika košulje</i></span>
+                  <p-dropdown name="selectedOvratnik" [options]="ovratniciKosulje" [(ngModel)]="selectedOvratnik"
+                    placeholder="Odaberite ili upišite svoju" [showClear]="true" editable="true"></p-dropdown>
+                </div>
+              </div>
+              <div class="ui-g-4">
+
+
+                <div class="pb-3">
+                  <span class="ui-inputgroup-addon"><i>Opseg struka u cm</i></span>
+                  <p-spinner placeholder="Vaš opseg struka" name="opsegStruka" size="30" [(ngModel)]="opsegStruka"
+                    [min]="5" [max]="150">
+                  </p-spinner>
+                </div>
+                <div>
+                  <div class="ui-g">
+                    Vozite li?
+                    <p-radioButton name="vozac" value="1" label="DA" [(ngModel)]="vozac" class="mx-3">
+                    </p-radioButton>
+                    <p-radioButton name="vozac" value="0" label="NE" [(ngModel)]="vozac">
+                    </p-radioButton>
+                  </div>
+                  <div class="pb-1">
+                    <div class="ui-g pt-2">
+                      Ako DA, jeste li imali prometnu nezgodu kao vozač?
+                      <p-radioButton name="prometna" value="1" label="DA" [(ngModel)]="prometna" class="mr-3">
+                      </p-radioButton>
+                      <p-radioButton name="prometna" value="0" label="NE" [(ngModel)]="prometna">
+                      </p-radioButton>
+                    </div>
+                  </div>
+                  <div class="pb-3">
+                    <span class="ui-inputgroup-addon"><i>Koliko puta?</i></span>
+                    <p-spinner placeholder="Broj prometnih nezgoda" name="brojPrometnihNezgoda" size="30"
+                      [(ngModel)]="brojPrometnihNezgoda" [min]="0" [max]="50">
+                    </p-spinner>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="pb-3" style="margin-top: -0.8rem;">
+            <div class="ui-g form-body">
+
+              <div class="ui-g-6">
+
+                <div id="S1" class="pb-3">
+                  <p><strong>1. Hrkanje:</strong><br>
+                    Hrčete li glasno (glasnije nego što pričate ili dovoljno glasno da Vas se može čuti iza zatvorenih
+                    vrata)?</p>
+                  <p-radioButton name="S1" value="1" label="DA" [(ngModel)]="S1" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S1" value="0" label="NE" [(ngModel)]="S1">
+                  </p-radioButton>
+                </div>
+                <div id="S3" class="pb-3">
+                  <p><strong>3. Zamijećenost:</strong><br>
+                    Je li netko zamijetio da ste prestali disati tijekom spavanja?</p>
+                  <p-radioButton name="S3" value="1" label="DA" [(ngModel)]="S3" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S3" value="0" label="NE" [(ngModel)]="S3">
+                  </p-radioButton>
+                </div>
+              </div>
+              <div class="ui-g-6" id="S2">
+
+                <div id="S2" class="pb-3">
+                  <p><strong>2. Umor:</strong><br>
+                    Osjećate li se često umorni, zamarate li se ili ste pospani tijekom dana?</p>
+                  <p-radioButton name="S2" value="1" label="DA" [(ngModel)]="S2" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S2" value="0" label="NE" [(ngModel)]="S2">
+                  </p-radioButton>
+                </div>
+              </div>
+            </div>
+            <hr class="pb-3" style="margin-top: -0.8rem;">
+            <div class="ui-g form-body">
+
+              <div class="ui-g-6 pt-2">
+                <p class="pb-2"><strong>Zdravstveni poremećaji i bolesti:</strong></p>
+                <div id="S4" class="pb-3">
+                  <p><strong>4. </strong>
+                    Imate li ili se liječite od povišenog arterijskog krvnog tlaka (hipertenzije)?</p>
+                  <p-radioButton name="S4" value="1" label="DA" [(ngModel)]="S4" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S4" value="0" label="NE" [(ngModel)]="S4">
+                  </p-radioButton>
+                </div>
+                <div id="S6" class="pb-3">
+                  <p><strong>6. </strong>
+                    Imate li ili se liječite od depresije?</p>
+                  <p-radioButton name="S6" value="1" label="DA" [(ngModel)]="S6" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S6" value="0" label="NE" [(ngModel)]="S6">
+                  </p-radioButton>
+                </div>
+                <div id="S8" class="pb-3">
+                  <p><strong>8. </strong>
+                    Imate li ili se liječite od gastroezofagealnog refluksa (GERB) <i><br>(u narodu: često imati
+                      žgaravicu)?</i></p>
+                  <p-radioButton name="S8" value="1" label="DA" [(ngModel)]="S8" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S8" value="0" label="NE" [(ngModel)]="S8">
+                  </p-radioButton>
+                </div>
+
+                <button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
+                  class="ui-button-raised ui-button-rounded ui-button-success"></button>
+              </div>
+              <div class="ui-g-6" id="S1">
+
+                <div id="S5" class="pt-4 pb-3">
+                  <p><strong>5. </strong>
+                    Imate li ili se liječite od šećerne bolesti (diabetes mellitus)?</p>
+                  <p-radioButton name="S5" value="1" label="DA" [(ngModel)]="S5" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S5" value="0" label="NE" [(ngModel)]="S5">
+                  </p-radioButton>
+                </div>
+                <div id="S7" class="pb-3">
+                  <p><strong>7. </strong>
+                    Imate li ili se liječite od astme?</p>
+                  <p-radioButton name="S7" value="1" label="DA" [(ngModel)]="S7" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton name="S7" value="0" label="NE" [(ngModel)]="S7">
+                  </p-radioButton>
+                </div>
+              </div>
+            </div>
+          </form>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

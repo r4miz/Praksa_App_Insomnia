@@ -1,0 +1,147 @@
+<div class="ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <div class="box">
+        <p-card>
+          <p-header>
+            <div class="heading">
+              Epworthova ljestvica pospanosti
+            </div>
+          </p-header>
+          <form class="form-formular" style="font-size: 100%;">
+            <hr class="pb-2" style="margin-top: -0.3rem;">
+            <div class="ui-g form-body">
+              <div class="ui-g-10 p-offset-1">
+                <p class="pt-2 pb-1">
+                  Koliko često Vam se događa da osjetite potrebu za spavanjem u niže navedenim situacijama?
+                  U ovim se primjerima radi o uobičajenim dnevnim aktivnostima.Čak i ako se u skoro vrijeme
+                  niste našli u nekoj od niže navedenih situacija, pokušajte zamisliti kako biste se osjećali.
+                  Uporabite predložene brojeve kojima ćete najbolje ocijeniti kako se u datom trenutku osjećate.
+                </p>
+                <div>
+                  <strong>0 &diams; neću </strong>
+                  osjećati potrebu za spavanjem (drijemanjem, kunjanjem)
+                </div>
+                <div>
+                  <strong>1 &diams;</strong> imat ću <strong>laganu</strong> potrebu za spavanjem (drijemanjem,
+                  kunjanjem)
+                </div>
+                <div>
+                  <strong>2 &diams;</strong> imat ću <strong>veliku</strong> potrebu za spavanjem (drijemanjem,
+                  kunjanjem)
+                </div>
+                <div>
+                  <strong>3 &diams;</strong> imat ću <strong>neodoljivu</strong> potrebu za spavanjem (drijemanjem,
+                  kunjanjem)
+                </div>
+              </div>
+            </div>
+            <hr class="pb-2" style="margin-top: 0rem;">
+            <div class="ui-g form-body">
+              <div class="ui-g-10 p-offset-1">
+                <p class="pt-2">Prilika:</p>
+                <div class="ui-g-4">
+                  <div id="EP1" class="pb-3">
+                    <p>Sjedite i čitate</p>
+                    <p-radioButton name="EP1" value="0" label="0" [(ngModel)]="EP1" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP1" value="1" label="1" [(ngModel)]="EP1" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP1" value="2" label="2" [(ngModel)]="EP1" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP1" value="3" label="3" [(ngModel)]="EP1">
+                    </p-radioButton>
+                  </div>
+                  <div id="EP4" class="pb-3">
+                    <p>Vozite se u automobilu kao putnik sat vremena neprekidne vožnje</p>
+                    <p-radioButton name="EP4" value="0" label="0" [(ngModel)]="EP4" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP4" value="1" label="1" [(ngModel)]="EP4" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP4" value="2" label="2" [(ngModel)]="EP4" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP4" value="3" label="3" [(ngModel)]="EP4">
+                    </p-radioButton>
+                  </div>
+                  <div id="EP7" class="pb-3">
+                    <p>Sjedite nakon obroka bez da ste popili alkoholno piće</p>
+                    <p-radioButton name="EP7" value="0" label="0" [(ngModel)]="EP7" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP7" value="1" label="1" [(ngModel)]="EP7" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP7" value="2" label="2" [(ngModel)]="EP7" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP7" value="3" label="3" [(ngModel)]="EP7">
+                    </p-radioButton>
+                  </div>
+                  <button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
+                  class="ui-button-raised ui-button-rounded ui-button-success"></button>
+                </div>
+                <div class="ui-g-4">
+                  <div id="EP2" class="pb-3">
+                    <p>Gledate TV</p>
+                    <p-radioButton name="EP2" value="0" label="0" [(ngModel)]="EP2" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP2" value="1" label="1" [(ngModel)]="EP2" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP2" value="2" label="2" [(ngModel)]="EP2" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP2" value="3" label="3" [(ngModel)]="EP2">
+                    </p-radioButton>
+                  </div>
+                  <div id="EP5" class="pb-3">
+                    <p>Ležite i odmarate se u dnevnom boravku kad Vam prilike dopuste</p>
+                    <p-radioButton name="EP5" value="0" label="0" [(ngModel)]="EP5" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP5" value="1" label="1" [(ngModel)]="EP5" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP5" value="2" label="2" [(ngModel)]="EP5" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP5" value="3" label="3" [(ngModel)]="EP5">
+                    </p-radioButton>
+                  </div>
+                  <div id="EP8" class="pb-3">
+                    <p>Nalazite se u automobilu zaustavljeni i stojite u gužvi nekoliko minuta</p>
+                    <p-radioButton name="EP8" value="0" label="0" [(ngModel)]="EP8" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP8" value="1" label="1" [(ngModel)]="EP8" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP8" value="2" label="2" [(ngModel)]="EP8" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP8" value="3" label="3" [(ngModel)]="EP8">
+                    </p-radioButton>
+                  </div>
+                </div>
+                <div class="ui-g-4">
+                  <div id="EP3" class="pb-3" style="margin-top:-1.25rem;">
+                    <p>Sjedite na sastanku (predstavi ili sl. na kojemu aktivno ne sudjelujete)</p>
+                    <p-radioButton name="EP3" value="0" label="0" [(ngModel)]="EP3" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP3" value="1" label="1" [(ngModel)]="EP3" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP3" value="2" label="2" [(ngModel)]="EP3" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP3" value="3" label="3" [(ngModel)]="EP3">
+                    </p-radioButton>
+                  </div>
+                  <div id="EP6" class="pb-3" style="margin-top:1.25rem;">
+                    <p>Sjedite i razgovarate s nekim</p>
+                    <p-radioButton name="EP6" value="0" label="0" [(ngModel)]="EP6" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP6" value="1" label="1" [(ngModel)]="EP6" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP6" value="2" label="2" [(ngModel)]="EP6" class="mr-3">
+                    </p-radioButton>
+                    <p-radioButton name="EP6" value="3" label="3" [(ngModel)]="EP6">
+                    </p-radioButton>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

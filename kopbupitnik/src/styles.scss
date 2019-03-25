@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/primeicons/primeicons.css');
+@import url('../node_modules/primeng/resources/primeng.min.css');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body, html {
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    height: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+
+}
+
+
+.box {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+a {
+    text-decoration: none;
+}
+
