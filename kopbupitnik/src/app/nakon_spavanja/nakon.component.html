@@ -1,0 +1,330 @@
+<div class="ui-fluid tablet">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <div class="box">
+        <p-card>
+          <p-header>
+            <div class="heading pb-3">
+              Upitnik bolesniku nakon spavanja
+            </div>
+          </p-header>
+          <form class="form-formular">
+            <div class="ui-g form-body">
+              <div class="ui-g-12 ui-g-md-6">
+                <p-scrollPanel [style]="{width: '100%', height: '500px'}">
+                  <p-tabView orientation="left" (onChange)="handleChange($event)">
+                    <p-tabPanel header="1. Pitanje" id="1">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="prvo" class="pb-3">
+                            <span class="ui-inputgroup-addon" style="font-weight: bold;">1.Koliko dugo Vam je trebalo da
+                              zaspete prošle večeri nakon što su ugašena svjetla?</span>
+                            <br><br><input type="text" class="tab" pInputText [(ngModel)]="prvo" name="prvo"
+                              required="required">
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="2. Pitanje" id="2">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="drugo" class="pb-3">
+                            <p style="font-weight: bold;">2.Kako je to uspoređujući s potrebnim vremenom da zaspete kod
+                              kuće?</p>
+                            <p-radioButton name="drugo" label="mnogo kraće nego obično" value="drugo1"
+                              [(ngModel)]="drugo" required></p-radioButton><br>
+                            <p-radioButton name="drugo" label="kao obično" value="drugo2" [(ngModel)]="drugo" required>
+                            </p-radioButton><br>
+                            <p-radioButton name="drugo" label="mnogo duže nego obično" value="drugo3"
+                              [(ngModel)]="drugo" required></p-radioButton>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="3. Pitanje" id="3">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="trece" class="pb-3">
+                            <span class="ui-inputgroup-addon" style="font-weight: bold;">3.Koliko dugo mislite da ste
+                              spavali prošle noći?</span>
+                            <input class="tab" type="text" pInputText [(ngModel)]="trece" name="trece"
+                              required="required">
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+
+                    <p-tabPanel header="4. Pitanje" id="4">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="cetvrto" class="pb-3">
+                            <p style="font-weight: bold;">4.Kako je to uspoređujući s dužinom spavanja kod kuće?</p>
+                            <p-radioButton name="cetvrto" label="mnogo kraće nego obično" value="cetvrto1"
+                              [(ngModel)]="cetvrto" required></p-radioButton><br>
+                            <p-radioButton name="cetvrto" label="kao obično" value="cetvrto2" [(ngModel)]="cetvrto"
+                              required></p-radioButton><br>
+                            <p-radioButton name="cetvrto" label="mnogo duže nego obično" value="cetvrto3"
+                              [(ngModel)]="cetvrto" required></p-radioButton>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="5. Pitanje" id="5">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="peto" class="pb-3">
+                            <span class="ui-inputgroup-addon" style="font-weight: bold;">5.Koliko puta ste se probudili
+                              prošle noći?</span>
+                            <input type="text" pInputText [(ngModel)]="peto" name="peto" class="tab"
+                              required="required">
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="6. Pitanje" id="6">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="sesto" class="pb-3">
+                            <p style="font-weight: bold;">6.Je li Vam spavanje prošle noći bilo dovoljno?</p>
+                            <p-radioButton name="sesto" label="NE" value="sesto1" [(ngModel)]="sesto" class="mr-3"
+                              required></p-radioButton>
+                            <p-radioButton name="sesto" label="DA" value="sesto2" [(ngModel)]="sesto" class="mr-3"
+                              required></p-radioButton>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="7. Pitanje" id="7">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="sedmo" class="pb-3">
+                            <p style="font-weight: bold;">7.Vrednujte kvalitetu Vašeg spavanja prošle noći tako da
+                              odaberete jedan broj u svih pet navedenih kategorija:</p>
+                            <span class="ui-inputgroup-addon">a/duboko </span>
+                            <p-radioButton name="sedmo1" label="1" value="sedmo11" [(ngModel)]="sedmo1" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo1" label="2" value="sedmo12" [(ngModel)]="sedmo1" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo1" label="3" value="sedmo13" [(ngModel)]="sedmo1" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo1" label="4" value="sedmo14" [(ngModel)]="sedmo1" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo1" label="5" value="sedmo15" [(ngModel)]="sedmo1" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo1" label="6" value="sedmo16" [(ngModel)]="sedmo1" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo1" label="7" value="sedmo17" [(ngModel)]="sedmo1" required>
+                            </p-radioButton>
+                            <span class="ui-inputgroup-addon"> plitko</span> <br><br>
+                            <span class="ui-inputgroup-addon">b/kratko </span>
+                            <p-radioButton name="sedmo2" label="1" value="sedmo21" [(ngModel)]="sedmo2" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo2" label="2" value="sedmo22" [(ngModel)]="sedmo2" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo2" label="3" value="sedmo23" [(ngModel)]="sedmo2" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo2" label="4" value="sedmo24" [(ngModel)]="sedmo2" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo2" label="5" value="sedmo25" [(ngModel)]="sedmo2" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo2" label="6" value="sedmo26" [(ngModel)]="sedmo2" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo2" label="7" value="sedmo27" [(ngModel)]="sedmo2" required>
+                            </p-radioButton>
+                            <span class="ui-inputgroup-addon"> dugačko</span> <br><br>
+                            <span class="ui-inputgroup-addon">c/isprekidano </span>
+                            <p-radioButton name="sedmo3" label="1" value="sedmo31" [(ngModel)]="sedmo3" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo3" label="2" value="sedmo32" [(ngModel)]="sedmo3" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo3" label="3" value="sedmo33" [(ngModel)]="sedmo3" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo3" label="4" value="sedmo34" [(ngModel)]="sedmo3" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo3" label="5" value="sedmo35" [(ngModel)]="sedmo3" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo3" label="6" value="sedmo36" [(ngModel)]="sedmo3" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo3" label="7" value="sedmo37" [(ngModel)]="sedmo3" required>
+                            </p-radioButton>
+                            <span class="ui-inputgroup-addon"> kontinuirano</span> <br><br>
+                            <span class="ui-inputgroup-addon">d/bez snova </span>
+                            <p-radioButton name="sedmo4" label="1" value="sedmo41" [(ngModel)]="sedmo4" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo4" label="2" value="sedmo42" [(ngModel)]="sedmo4" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo4" label="3" value="sedmo43" [(ngModel)]="sedmo4" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo4" label="4" value="sedmo44" [(ngModel)]="sedmo4" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo4" label="5" value="sedmo45" [(ngModel)]="sedmo4" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo4" label="6" value="sedmo46" [(ngModel)]="sedmo4" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo4" label="7" value="sedmo47" [(ngModel)]="sedmo4" required>
+                            </p-radioButton>
+                            <span class="ui-inputgroup-addon"> s mnogo snova</span> <br><br>
+                            <span class="ui-inputgroup-addon">e/nemirno </span>
+                            <p-radioButton name="sedmo5" label="1" value="sedmo51" [(ngModel)]="sedmo5" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo5" label="2" value="sedmo52" [(ngModel)]="sedmo5" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo5" label="3" value="sedmo53" [(ngModel)]="sedmo5" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo5" label="4" value="sedmo54" [(ngModel)]="sedmo5" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo5" label="5" value="sedmo55" [(ngModel)]="sedmo5" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo5" label="6" value="sedmo56" [(ngModel)]="sedmo5" required>
+                            </p-radioButton>
+                            <p-radioButton name="sedmo5" label="7" value="sedmo57" [(ngModel)]="sedmo5" required>
+                            </p-radioButton>
+                            <span class="ui-inputgroup-addon"> mirno</span>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="8. Pitanje" id="8">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="osmo" class="pb-3">
+                            <p style="font-weight: bold;">8.Pronađite tvrdnju koja najbolje opisuje Vaše
+                              sadašnje/trenutačno stanje:</p>
+                            <p-radioButton name="osmo" label="1.Osjećam se aktivan i vitalan,spreman,potpuno budan."
+                              value="osmo1" [(ngModel)]="osmo" required></p-radioButton><br>
+                            <p-radioButton name="osmo"
+                              label="2.Funkcioniram na visokoj razini,ali ne na vrhuncu,mogu se koncentrirati."
+                              value="osmo2" [(ngModel)]="osmo" required></p-radioButton><br>
+                            <p-radioButton name="osmo" label="3.Relaksiran sam,budan,no ne u potpunosti." value="osmo3"
+                              [(ngModel)]="osmo" required></p-radioButton><br>
+                            <p-radioButton name="osmo" label="4.Lagano sam pospan" value="osmo4" [(ngModel)]="osmo"
+                              required></p-radioButton><br>
+                            <p-radioButton name="osmo" label="5.Pospan sam,usporen,gubim interes biti budan."
+                              value="osmo5" [(ngModel)]="osmo" required></p-radioButton><br>
+                            <p-radioButton name="osmo"
+                              label="6.Već sam izrazitije pospan,preferiram ležati u krevetu,borim se sa snom."
+                              value="osmo6" [(ngModel)]="osmo" required></p-radioButton><br>
+                            <p-radioButton name="osmo"
+                              label="7.Gotovo već spavam,samo što nisam zaspao,više ne mogu ostati budan." value="osmo7"
+                              [(ngModel)]="osmo" required></p-radioButton><br>
+                            <span class="ui-inputgroup-addon">Koliko je sada sati dok ovo popunjavate?</span>
+                            <input type="text" class="tab" name="osmo8" pInputText [(ngModel)]="osmo8">
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="9. Pitanje" id="9">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="deveto" class="pb-3">
+                            <p style="font-weight:bold;">9.Što Vas je probudilo ovo jutro?</p>
+                            <p-radioButton name="deveto" label="buka  " value="deveto1" [(ngModel)]="deveto" required>
+                            </p-radioButton><br>
+                            <p-radioButton name="deveto" label="nelogodnost  " value="deveto2" [(ngModel)]="deveto"
+                              required></p-radioButton><br>
+                            <p-radioButton name="deveto" label="ne znam  " value="deveto3" [(ngModel)]="deveto"
+                              required></p-radioButton><br>
+                            <p-radioButton name="deveto" label="probudio sam se sam  " value="deveto4"
+                              [(ngModel)]="deveto" required></p-radioButton><br>
+                            <span class="ui-inputgroup-addon">Druge okolnosti (opišite) </span>
+                            <input type="text" pInputText [(ngModel)]="deveto5" name="deveto5" class="tab">
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="10. Pitanje" id="10">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="deseto" class="pb-3">
+                            <p style="font-weight:bold;">10.Općenito kako možete usporediti Vaše spavanje prošle noći sa
+                              spavanjem kod kuće?</p>
+                            <p-radioButton name="deseto" label="lošije nego obično" value="deseto1" [(ngModel)]="deseto"
+                              required></p-radioButton><br>
+                            <p-radioButton name="deseto" label="kao obično" value="deseto2" [(ngModel)]="deseto"
+                              required></p-radioButton><br>
+                            <p-radioButton name="deseto" label="mnogo bolje" value="deseto3" [(ngModel)]="deseto"
+                              required></p-radioButton>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="11. Pitanje" id="11">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="jedanaesto" class="pb-3">
+                            <p style="font-weight: bold;">11.Kako bi vrednovali tablete za spavanje/CPAP koje ste jučer
+                              na večer dobili (ako ste ih dobili)?</p><br>
+                            <p-radioButton name="jedanaesto" label="izvrsno" value="jedanaesto1"
+                              [(ngModel)]="jedanaesto" required></p-radioButton><br>
+                            <p-radioButton name="jedanaesto" label="prosječno" value="jedanaesto2"
+                              [(ngModel)]="jedanaesto" required></p-radioButton><br>
+                            <p-radioButton name="jedanaesto" label="beskorisno" value="jedanaesto3"
+                              [(ngModel)]="jedanaesto" required></p-radioButton>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="12. Pitanje" id="12">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="dvanaesto" class="pb-3">
+                            <span class="ui-inputgroup-addon" style="font-weight: bold;">12.Sjećate li se snova od
+                              prošle noći?</span> <br>
+                            <p-radioButton (click)="checkDvanaesto()" name="dvanaesto" label="NE  "value="dvanaesto1" [(ngModel)]="dvanaesto"
+                              class="mr-3" required></p-radioButton>
+                            <p-radioButton (click)="checkDvanaesto()" name="dvanaesto" label="DA" value="dvanaesto2" [(ngModel)]="dvanaesto"
+                              class="mr-3" required></p-radioButton>
+                            <div id="dvanaestoCheck" hidden>
+                            <br><br><span class="ui-inputgroup-addon">Ako DA,opišite ih! </span>
+                            <textarea pInputTextarea [(ngModel)]="dvanaesto3" [rows]="5" [cols]="30" class="tab"
+                              name="dvanaesto3"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="13. Pitanje" id="13">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="trinaesto" class="pb-3">
+                            <span class="ui-inputgroup-addon" style="font-weight: bold;">13.Imate li ikakvih fizičkih
+                              poteškoća ovog jutra?</span> <br>
+                            <p-radioButton (click)="checkTrinaesto()" name="trinaesto" label="NE  " value="trinaesto1" [(ngModel)]="trinaesto"
+                              class="mr-3" required></p-radioButton>
+                            <p-radioButton (click)="checkTrinaesto()" name="trinaesto" label="DA" value="trinaesto2" [(ngModel)]="trinaesto"
+                              class="mr-3" required></p-radioButton>
+                            <div id="trinaestoCheck" hidden>
+                            <br><br><span class="ui-inputgroup-addon">Ako DA,opišite ih! </span>
+                            <textarea pInputTextarea [(ngModel)]="trinaesto3" [rows]="5" [cols]="30" class="tab"
+                              name="trinaesto3"></textarea>
+                          </div>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                    <p-tabPanel header="14. Pitanje" id="14">
+                      <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                        <div class="font">
+                          <div id="cetrnaesto" class="pb-3">
+                            <span class="ui-inputgroup-addon" style="font-weight: bold;">14.Dodajte druge informacije
+                              ili komentare. </span>
+                            <br><textarea pInputTextarea [(ngModel)]="cetrnaesto" [rows]="5" [cols]="30" class="tab"
+                              name="cetrnaesto"></textarea>
+                          </div>
+                        </div>
+                      </p-scrollPanel>
+                    </p-tabPanel>
+                  </p-tabView>
+                </p-scrollPanel>
+                <div class="ui-g-offset-1">
+                  <a routerLink="/"><button pButton type="submit"  style="width: 6rem;" icon="pi pi-check" label="Završi"
+                      class="ui-button-raised ui-button-rounded ui-button-success"></button></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>
