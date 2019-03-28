@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 
  @Component ({
      templateUrl:'./nakon.component.html',
-     styleUrls: ['./nakon.component.css']
+     styleUrls: ['./nakon.component.scss']
 
  })
 

@@ -26,6 +26,9 @@ import { TabletFormularEpworthComponent } from './tablet-formular-epworth/tablet
 import { SidebarModule } from 'primeng/sidebar';
 import { TabletFormularNoseComponent } from './tablet-formular-nose/tablet-formular-nose.component';
 import { AccordionModule } from 'primeng/accordion';
+import { BerlinskiUpitnikComponent } from './berlinski-upitnik/berlinski-upitnik.component';
+import { NakonComponent } from './nakon_spavanja/nakon.component';
+import { PrijeComponent} from './prije_spavanja/prije.component';
 
 
 @NgModule({
@@ -39,6 +42,9 @@ import { AccordionModule } from 'primeng/accordion';
     TabletFormularStopComponent,
     TabletFormularEpworthComponent,
     TabletFormularNoseComponent,
+    BerlinskiUpitnikComponent,
+    NakonComponent,
+    PrijeComponent,
   ],
   imports: [
     BrowserModule,

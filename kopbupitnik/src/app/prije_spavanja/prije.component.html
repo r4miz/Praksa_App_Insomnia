@@ -1,215 +1,202 @@
-<div class="ui-fluid tablet">
-    <div class="ui-g">
-      <div class="ui-g-12">
-        <div class="box">
-          <p-card>
-            <p-header>
-              <div class="heading pb-3">
-                Upitnik bolesniku prije spavanja
-              </div>
-            </p-header>
-            <form class="form-formular">
-              <div class="ui-g form-body">
-                <div class="ui-g-12 ui-g-md-6">
-                  <p-scrollPanel [style]="{width: '100%', height: '500px'}">
-                    <p-tabView orientation="left" (onChange)="handleChange($event)">
-                      <p-tabPanel header="1. Pitanje" id="1">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="prvo" class="pb-3">
-                                <p style="font-weight:bold;">1.Je li današnji dan bio nesvakidašnji?</p>
-                                <p-radioButton (click)="checkPrvo()" name="prvo" label="NE" value="prvo1" [(ngModel)]="prvo" class="mr-3" required></p-radioButton>
-                                <p-radioButton (click)="checkPrvo()" name="prvo" label="DA" value="prvo2" [(ngModel)]="prvo" class="mr-3" required></p-radioButton>
-                                <div id="prvoCheck" hidden>
-                                <p>Ako DA,opišite u kojem pogledu?</p>
-                                <textarea pInputTextarea [(ngModel)]="prvo3" [rows]="5" [cols]="30" class="tab" name="prvo3"></textarea>
-                                </div>                            
-                              </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="2. Pitanje" id="2">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="drugo" class="pb-3">
-                                <p style="font-weight: bold;">2.Koliko ste spavali prošle noći?</p>
-                                <input type="text" pInputText [(ngModel)]="drugo" name="drugo" class="tab" required="required"> 
-                                <span class="ui-inputgroup-addon">sati</span>                         
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="3. Pitanje" id="3">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="trece" class="pb-3">
-                                <p style="font-weight: bold;">3.Jeste li danas spavali tijekom dana?</p>
-                                <p-radioButton (click)="checkTrece()" name="trece" label="NE" value="treceNe" [(ngModel)]="trece" class="mr-3" required></p-radioButton>
-                                <p-radioButton  (click)="checkTrece()" name="trece" label="DA" value="treceDa" [(ngModel)]="trece" class="mr-3" required></p-radioButton>
-                                <div id="treceCheck" hidden>
-                                <br><br><span class="ui-inputgroup-addon">Ako DA,kada?</span> 
-                                <input type="text" pInputText [(ngModel)]="trece1" name="trece1" class="tab"> 
-                                <span class="ui-inputgroup-addon">Koliko dugo ste spavali?</span> 
-                                <input type="text" pInputText [(ngModel)]="trece2" name="trece2" class="tab">
-                                </div>                           
-                              </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-  
-                      <p-tabPanel header="4. Pitanje" id="4">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="cetvrto" class="pb-3">
-                                <p style="font-weight: bold;">4.Jeste li pili kakvo alkoholično piće danas?</p>
-                                <p-radioButton (click)="checkCetvrto()" name="cetvrto" label="NE" value="cetvrtoNe" [(ngModel)]="cetvrto" class="mr-3" required></p-radioButton>
-                                <p-radioButton (click)="checkCetvrto()" name="cetvrto" label="DA" value="cetvrtoDa" [(ngModel)]="cetvrto" class="mr-3" required></p-radioButton>
-                               <div id="cetvrtoCheck" hidden>
-                                <br><br><span class="ui-inputgroup-addon">Ako DA,kada?</span> 
-                                <input type="text" pInputText [(ngModel)]="cetvrto1" name="cetvrto1" class="tab"> 
-                                <span class="ui-inputgroup-addon">Koju vrstu pića?</span> 
-                                <input type="text" pInputText [(ngModel)]="cetvrto2" name="cetvrto2" class="tab">
-                                <span class="ui-inputgroup-addon">Koliko?</span> 
-                                <input type="text" pInputText [(ngModel)]="cetvrto3" name="cetvrto3"class="tab">
-                                </div>
-                              </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="5. Pitanje" id="5">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="peto" class="pb-3">
-                                <span class="ui-inputgroup-addon" style="font-weight: bold;">5.Kad ste zadnji put jeli?</span> 
-                                <input type="text" pInputText [(ngModel)]="peto1" required="required"  name="peto1" class="tab"> 
-                                <span class="ui-inputgroup-addon">Je li to bio obrok</span> 
-                                <input type="text" pInputText [(ngModel)]="peto2" class="tab" name="peto2">
-                                <span class="ui-inputgroup-addon">ručak ili snack</span> 
-                                <input type="text" pInputText [(ngModel)]="peto3" class="tab" name="peto3">
-                                <span class="ui-inputgroup-addon">?</span>
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="6. Pitanje" id="6">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="sesto" class="pb-3">
-                                <p style="font-weight: bold;">6.Navedite lijekove koje ste danas uzeli (uključujući i vitamine i aspirine):</p>
-                                <p>Lijek (Količina)</p>
-                                <span class="ui-inputgroup-addon">a)</span> 
-                                <input type="text" pInputText [(ngModel)]="sesto1" class="tab" name="sesto1"><br>
-                                <span class="ui-inputgroup-addon">b)</span> 
-                                <input type="text" pInputText [(ngModel)]="sesto2" class="tab" name="sesto2"><br>
-                                <span class="ui-inputgroup-addon">c)</span> 
-                                <input type="text" pInputText [(ngModel)]="sesto3" class="tab" name="sesto3"><br>
-                                <span class="ui-inputgroup-addon">d)</span> 
-                                <input type="text" pInputText [(ngModel)]="sesto4" class="tab" name="sesto4"><br>
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="7. Pitanje" id="7">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="sedmo" class="pb-3">
-                                <span class="ui-inputgroup-addon" style="font-weight: bold;">7.Kad ste zadnji put uzeli lijek za spavanje ili budnost?</span> 
-                                <input type="text" pInputText [(ngModel)]="sedmo1" required="required" class="tab" name="sedmo1"> 
-                                <span class="ui-inputgroup-addon">(datum)</span> <br><br>        
-                                <p>Lijek (Količina)</p>
-                                <span class="ui-inputgroup-addon">a)</span> 
-                                <input type="text" pInputText [(ngModel)]="sedmo2" class="tab" name="sedmo2"><br>
-                                <span class="ui-inputgroup-addon">b)</span> 
-                                <input type="text" pInputText [(ngModel)]="sedmo3" class="tab" name="sedmo3"><br>
-                                <span class="ui-inputgroup-addon">c)</span> 
-                                <input type="text" pInputText [(ngModel)]="sedmo4" class="tab" name="sedmo4"><br>
-                                <span class="ui-inputgroup-addon">d)</span> 
-                                <input type="text" pInputText [(ngModel)]="sedmo5" class="tab" name="sedmo5"><br>
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="8. Pitanje" id="8">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="osmo" class="pb-3">
-                                <p style="font-weight: bold;">8.Imate li kakve fizičke teškoće upravo sada?</p>
-                                <p-radioButton name="osmo" label="NE" value="osmoNe" [(ngModel)]="osmo" class="mr-3" required></p-radioButton>
-                                <p-radioButton name="osmo" label="DA" value="osmoDa" [(ngModel)]="osmo" class="mr-3" required></p-radioButton>                  
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="9. Pitanje" id="9">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="deveto" class="pb-3">
-                                <p style="font-weight: bold;">9.Jeste li spremni ići sada spavati?</p>
-                                <p-radioButton (click)="checkDeveto()" name="deveto" label="NE" value="devetoNe" [(ngModel)]="deveto" class="mr-3" required></p-radioButton>
-                                <p-radioButton (click)="checkDeveto()" name="deveto" label="DA" value="devetoDa" [(ngModel)]="deveto" class="mr-3" required></p-radioButton>
-                                <div id="devetoCheck" hidden>                               
-                                <br><span class="ui-inputgroup-addon">Ako NE,navedite razlog:</span> 
-                                <input type="text" pInputText [(ngModel)]="deveto3" class="tab" name="deveto3">
-                                </div>
-                              </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="10. Pitanje" id="10">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="deseto" class="pb-3">
-                                <p style="font-weight: bold;">10.Pronađite tvrdnju koja najbolje opisuje Vaše sadašnje/trenutačno stanje:</p>
-                                <p-radioButton name="deseto" label="1.Osjećam se aktivan i vitalan,spreman,potpuno budan." value="deseto1" [(ngModel)]="deseto" required></p-radioButton><br>
-                                <p-radioButton name="deseto" label="2.Funkcioniram na visokoj razini,ali ne na vrhuncu,mogu se koncentrirati." value="deseto2" [(ngModel)]="deseto" required></p-radioButton><br>
-                                <p-radioButton name="deseto" label="3.Relaksiran sam,budan,no ne u potpunosti." value="deseto3" [(ngModel)]="deseto" required></p-radioButton><br>
-                                <p-radioButton name="deseto" label="4.Lagano sam pospan" value="deseto4" [(ngModel)]="deseto" required></p-radioButton><br>
-                                <p-radioButton name="deseto" label="5.Pospan sam,usporen,gubim interes biti budan." value="deseto5" [(ngModel)]="deseto" required></p-radioButton><br>
-                                <p-radioButton name="deseto" label="6.Već sam izrazitije pospan,preferiram ležati u krevetu,borim se sa snom." value="deseto6" [(ngModel)]="deseto" required></p-radioButton><br>
-                                <p-radioButton name="deseto" label="7.Gotovo već spavam,samo što nisam zaspao,više ne mogu ostati budan." value="deseto7" [(ngModel)]="deseto" required></p-radioButton><br>
-                                <span class="ui-inputgroup-addon">Koliko je sada sati dok ovo popunjavate?</span> 
-                                <input type="text" pInputText [(ngModel)]="deseto8" class="tab" name="deseto8"><br>
-                                <p>Vi ste:</p>
-                                <p-radioButton name="ddeseto" label="Dešnjak" value="ddeseto1" [(ngModel)]="ddeseto" required></p-radioButton><br>
-                                <p-radioButton name="ddeseto" label="Lijevak" value="ddeseto2" [(ngModel)]="ddeseto" required></p-radioButton><br>
-                                <p-radioButton name="ddeseto" label="Ambi dekster" value="ddeseto3" [(ngModel)]="ddeseto" required></p-radioButton>                   
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="11. Pitanje" id="11">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="jedanaesto" class="pb-3">
-                                <p style="font-weight: bold;">11.Dodajte još daljnje informacije ili Vaše komentare:</p>
-                                <textarea pInputTextarea [(ngModel)]="jedanaesto" [rows]="5" [cols]="30" class="tab" name="jedanaesto"></textarea>
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                      <p-tabPanel header="12. Pitanje" id="12">
-                        <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                          <div class="font">
-                            <div id="dvanaesto" class="pb-3">
-                                <span class="ui-inputgroup-addon" style="font-weight: bold;">12.Sadašnji CPAP/BiPAP tlak:</span> 
-                                <input type="text" pInputText [(ngModel)]="dvanaesto" required="required" class="tab" name="dvanaesto"> 
-                            </div>
-                          </div>
-                        </p-scrollPanel>
-                      </p-tabPanel>
-                    </p-tabView>
-                  </p-scrollPanel>
-                  <div class="ui-g-offset-1">
-                      <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check"
-                          label="Završi" class="ui-button-raised ui-button-rounded ui-button-success"></button></a>
-                    </div>
-                </div>
-  
-              </div>
-            </form>
-          </p-card>
-        </div>
-      </div>
-    </div>
+<div class="p-grid p-align-center vertAlign">
+  <div class="p-col heading pt-3 pb-3">
+    Upitnik bolesniku prije spavanja
   </div>
- 
+
+  <form class="form-formular maxHeight">
+
+    <p-scrollPanel [style]="{width: '100%', height: '100%;'}">
+      <p-tabView orientation="left" (onChange)="handleChange($event)">
+        <p-tabPanel header="1. Pitanje" id="1">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="prvo" class="pb-3">
+                  <p style="font-weight:bold;">1.Je li današnji dan bio nesvakidašnji?</p>
+                  <p-radioButton (click)="checkPrvo()" name="prvo" label="NE" value="prvo1" [(ngModel)]="prvo" class="mr-3" required></p-radioButton>
+                  <p-radioButton (click)="checkPrvo()" name="prvo" label="DA" value="prvo2" [(ngModel)]="prvo" class="mr-3" required></p-radioButton>
+                  <div id="prvoCheck" hidden>
+                  <p>Ako DA,opišite u kojem pogledu?</p>
+                  <textarea pInputTextarea [(ngModel)]="prvo3" [rows]="5" [cols]="30" class="tab" name="prvo3"></textarea>
+                  </div>                            
+                </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="2. Pitanje" id="2">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="drugo" class="pb-3">
+                  <p style="font-weight: bold;">2.Koliko ste spavali prošle noći?</p>
+                  <input type="text" pInputText [(ngModel)]="drugo" name="drugo" class="tab" required="required"> 
+                  <span class="ui-inputgroup-addon">sati</span>                         
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="3. Pitanje" id="3">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="trece" class="pb-3">
+                  <p style="font-weight: bold;">3.Jeste li danas spavali tijekom dana?</p>
+                  <p-radioButton (click)="checkTrece()" name="trece" label="NE" value="treceNe" [(ngModel)]="trece" class="mr-3" required></p-radioButton>
+                  <p-radioButton  (click)="checkTrece()" name="trece" label="DA" value="treceDa" [(ngModel)]="trece" class="mr-3" required></p-radioButton>
+                  <div id="treceCheck" hidden>
+                  <br><br><span class="ui-inputgroup-addon">Ako DA,kada?</span> 
+                  <input type="text" pInputText [(ngModel)]="trece1" name="trece1" class="tab"> 
+                  <span class="ui-inputgroup-addon">Koliko dugo ste spavali?</span> 
+                  <input type="text" pInputText [(ngModel)]="trece2" name="trece2" class="tab">
+                  </div>                           
+                </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+
+        <p-tabPanel header="4. Pitanje" id="4">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="cetvrto" class="pb-3">
+                  <p style="font-weight: bold;">4.Jeste li pili kakvo alkoholično piće danas?</p>
+                  <p-radioButton (click)="checkCetvrto()" name="cetvrto" label="NE" value="cetvrtoNe" [(ngModel)]="cetvrto" class="mr-3" required></p-radioButton>
+                  <p-radioButton (click)="checkCetvrto()" name="cetvrto" label="DA" value="cetvrtoDa" [(ngModel)]="cetvrto" class="mr-3" required></p-radioButton>
+                 <div id="cetvrtoCheck" hidden>
+                  <br><br><span class="ui-inputgroup-addon">Ako DA,kada?</span> 
+                  <input type="text" pInputText [(ngModel)]="cetvrto1" name="cetvrto1" class="tab"> 
+                  <span class="ui-inputgroup-addon">Koju vrstu pića?</span> 
+                  <input type="text" pInputText [(ngModel)]="cetvrto2" name="cetvrto2" class="tab">
+                  <span class="ui-inputgroup-addon">Koliko?</span> 
+                  <input type="text" pInputText [(ngModel)]="cetvrto3" name="cetvrto3"class="tab">
+                  </div>
+                </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="5. Pitanje" id="5">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="peto" class="pb-3">
+                  <span class="ui-inputgroup-addon" style="font-weight: bold;">5.Kad ste zadnji put jeli?</span> 
+                  <input type="text" pInputText [(ngModel)]="peto1" required="required"  name="peto1" class="tab"> 
+                  <span class="ui-inputgroup-addon">Je li to bio obrok</span> 
+                  <input type="text" pInputText [(ngModel)]="peto2" class="tab" name="peto2">
+                  <span class="ui-inputgroup-addon">ručak ili snack</span> 
+                  <input type="text" pInputText [(ngModel)]="peto3" class="tab" name="peto3">
+                  <span class="ui-inputgroup-addon">?</span>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="6. Pitanje" id="6">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="sesto" class="pb-3">
+                  <p style="font-weight: bold;">6.Navedite lijekove koje ste danas uzeli (uključujući i vitamine i aspirine):</p>
+                  <p>Lijek (Količina)</p>
+                  <span class="ui-inputgroup-addon">a)</span> 
+                  <input type="text" pInputText [(ngModel)]="sesto1" class="tab" name="sesto1"><br>
+                  <span class="ui-inputgroup-addon">b)</span> 
+                  <input type="text" pInputText [(ngModel)]="sesto2" class="tab" name="sesto2"><br>
+                  <span class="ui-inputgroup-addon">c)</span> 
+                  <input type="text" pInputText [(ngModel)]="sesto3" class="tab" name="sesto3"><br>
+                  <span class="ui-inputgroup-addon">d)</span> 
+                  <input type="text" pInputText [(ngModel)]="sesto4" class="tab" name="sesto4"><br>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="7. Pitanje" id="7">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="sedmo" class="pb-3">
+                  <span class="ui-inputgroup-addon" style="font-weight: bold;">7.Kad ste zadnji put uzeli lijek za spavanje ili budnost?</span> 
+                  <input type="text" pInputText [(ngModel)]="sedmo1" required="required" class="tab" name="sedmo1"> 
+                  <span class="ui-inputgroup-addon">(datum)</span> <br><br>        
+                  <p>Lijek (Količina)</p>
+                  <span class="ui-inputgroup-addon">a)</span> 
+                  <input type="text" pInputText [(ngModel)]="sedmo2" class="tab" name="sedmo2"><br>
+                  <span class="ui-inputgroup-addon">b)</span> 
+                  <input type="text" pInputText [(ngModel)]="sedmo3" class="tab" name="sedmo3"><br>
+                  <span class="ui-inputgroup-addon">c)</span> 
+                  <input type="text" pInputText [(ngModel)]="sedmo4" class="tab" name="sedmo4"><br>
+                  <span class="ui-inputgroup-addon">d)</span> 
+                  <input type="text" pInputText [(ngModel)]="sedmo5" class="tab" name="sedmo5"><br>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="8. Pitanje" id="8">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="osmo" class="pb-3">
+                  <p style="font-weight: bold;">8.Imate li kakve fizičke teškoće upravo sada?</p>
+                  <p-radioButton name="osmo" label="NE" value="osmoNe" [(ngModel)]="osmo" class="mr-3" required></p-radioButton>
+                  <p-radioButton name="osmo" label="DA" value="osmoDa" [(ngModel)]="osmo" class="mr-3" required></p-radioButton>                  
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="9. Pitanje" id="9">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="deveto" class="pb-3">
+                  <p style="font-weight: bold;">9.Jeste li spremni ići sada spavati?</p>
+                  <p-radioButton (click)="checkDeveto()" name="deveto" label="NE" value="devetoNe" [(ngModel)]="deveto" class="mr-3" required></p-radioButton>
+                  <p-radioButton (click)="checkDeveto()" name="deveto" label="DA" value="devetoDa" [(ngModel)]="deveto" class="mr-3" required></p-radioButton>
+                  <div id="devetoCheck" hidden>                               
+                  <br><span class="ui-inputgroup-addon">Ako NE,navedite razlog:</span> 
+                  <input type="text" pInputText [(ngModel)]="deveto3" class="tab" name="deveto3">
+                  </div>
+                </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="10. Pitanje" id="10">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="deseto" class="pb-3">
+                  <p style="font-weight: bold;">10.Pronađite tvrdnju koja najbolje opisuje Vaše sadašnje/trenutačno stanje:</p>
+                  <p-radioButton name="deseto" label="1.Osjećam se aktivan i vitalan,spreman,potpuno budan." value="deseto1" [(ngModel)]="deseto" required></p-radioButton><br>
+                  <p-radioButton name="deseto" label="2.Funkcioniram na visokoj razini,ali ne na vrhuncu,mogu se koncentrirati." value="deseto2" [(ngModel)]="deseto" required></p-radioButton><br>
+                  <p-radioButton name="deseto" label="3.Relaksiran sam,budan,no ne u potpunosti." value="deseto3" [(ngModel)]="deseto" required></p-radioButton><br>
+                  <p-radioButton name="deseto" label="4.Lagano sam pospan" value="deseto4" [(ngModel)]="deseto" required></p-radioButton><br>
+                  <p-radioButton name="deseto" label="5.Pospan sam,usporen,gubim interes biti budan." value="deseto5" [(ngModel)]="deseto" required></p-radioButton><br>
+                  <p-radioButton name="deseto" label="6.Već sam izrazitije pospan,preferiram ležati u krevetu,borim se sa snom." value="deseto6" [(ngModel)]="deseto" required></p-radioButton><br>
+                  <p-radioButton name="deseto" label="7.Gotovo već spavam,samo što nisam zaspao,više ne mogu ostati budan." value="deseto7" [(ngModel)]="deseto" required></p-radioButton><br>
+                  <span class="ui-inputgroup-addon">Koliko je sada sati dok ovo popunjavate?</span> 
+                  <input type="text" pInputText [(ngModel)]="deseto8" class="tab" name="deseto8"><br>
+                  <p>Vi ste:</p>
+                  <p-radioButton name="ddeseto" label="Dešnjak" value="ddeseto1" [(ngModel)]="ddeseto" required></p-radioButton><br>
+                  <p-radioButton name="ddeseto" label="Lijevak" value="ddeseto2" [(ngModel)]="ddeseto" required></p-radioButton><br>
+                  <p-radioButton name="ddeseto" label="Ambi dekster" value="ddeseto3" [(ngModel)]="ddeseto" required></p-radioButton>                   
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="11. Pitanje" id="11">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="jedanaesto" class="pb-3">
+                  <p style="font-weight: bold;">11.Dodajte još daljnje informacije ili Vaše komentare:</p>
+                  <textarea pInputTextarea [(ngModel)]="jedanaesto" [rows]="5" [cols]="30" class="tab" name="jedanaesto"></textarea>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="12. Pitanje" id="12">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="dvanaesto" class="pb-3">
+                  <span class="ui-inputgroup-addon" style="font-weight: bold;">12.Sadašnji CPAP/BiPAP tlak:</span> 
+                  <input type="text" pInputText [(ngModel)]="dvanaesto" required="required" class="tab" name="dvanaesto"> 
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+
+      </p-tabView>
+    </p-scrollPanel>
+    
+    <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
+        class="ui-button-raised ui-button-rounded ui-button-success pt-1"></button></a>
+  </form>
+  
+</div>
