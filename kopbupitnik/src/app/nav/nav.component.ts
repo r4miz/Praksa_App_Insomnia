@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { SelectItem } from 'primeng/api';
+
 
 
 @Component({
@@ -12,59 +14,20 @@ import { MenuItem } from 'primeng/api';
 export class NavComponent implements OnInit {
 
   sidebar;
+  desktop: SelectItem[];
+  tablet: SelectItem[];
   appTitle: string = 'KOPB upitnik';
   items: MenuItem[];
-  constructor(private data: DataService, private router: Router) { }
+  SelDesktopFormular: string = null;
+  SelTabletFormular: string = null;
 
-  ngOnInit() {
+  constructor(private data: DataService, private router: Router) {  }
 
-    this.items = [
-      {
-        icon: 'pi pi-info-circle',
-        label: 'Prijavite se putem OIB-a',
-        routerLink: '/'
+  ngOnInit() { }
 
-      },
-      {
-        label: 'Upitnici',
-        items: [
-          {
-            label: 'STOP upitnik',
-            routerLink: '/stop-formular'
-          },
-          {
-            label: 'Epworthova ljestvica pospanosti',
-            routerLink: '/epworth-ljestva'
-          },
-          {
-
-            label: 'NOSE instrument',
-            routerLink: '/nose-formular'
-          },
-        ]
-      },
-      {
-        label: 'Tablet upitnici',
-        items: [
-          {
-            label: 'STOP upitnik',
-            routerLink: '/tab-stop-formular'
-          },
-          {
-            label: 'Epworthova ljestvica pospanosti',
-            routerLink: '/tab-epworth-ljestva'
-          },
-          {
-
-            label: 'NOSE instrument',
-            routerLink: '/nose-formular'
-          },
-        ]
-      }
-
-    ];
+  close(){
+    this.sidebar = false;
   }
-
 }
 
 

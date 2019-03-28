@@ -1,0 +1,161 @@
+<div class="ui-g-12" style="margin-top: -1rem;">
+  <div class="box">
+    <p-card>
+      <p-header>
+        <div class="heading pb-3">
+          Nasal Obstruction Symptom Evaluation (NOSE) Instrument
+        </div>
+      </p-header>
+      <form class="form-formular">
+        <div class="ui-g form-body">
+          <div class="ui-g-12 ui-g-md-6">
+            <p-scrollPanel [style]="{width: '100%', height: '500px'}">
+              <p-tabView orientation="left" (onChange)="handleChange($event)">
+                <p-tabPanel header="Uvod" id="0">
+                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                    <div class="font">
+                      <div class="pb-3">
+                        <p>
+                          Tijekom <strong>posljednjih mjesec</strong> dana, koliki problem su bila sljedeća stanja za
+                          Vas? Zaokružite odgovor koji najbolje
+                          odgovara.
+                        </p><br>
+                        <div>
+                          Bolujete li od alergijskog rinitisa?
+                          <p-radioButton name="alergijskiRinitis" value="1" label="DA" [(ngModel)]="alergijskiRinitis"
+                            class="mr-3">
+                          </p-radioButton>
+                          <p-radioButton name="alergijskiRinitis" value="0" label="NE" [(ngModel)]="alergijskiRinitis">
+                          </p-radioButton>
+                        </div>
+                        <div>
+                          Jeste li operirali nos (septum, polipi)?
+                          <p-radioButton name="operiraliNos" value="1" label="DA" [(ngModel)]="operiraliNos"
+                            class="mr-3">
+                          </p-radioButton>
+                          <p-radioButton name="operiraliNos" value="0" label="NE" [(ngModel)]="operiraliNos">
+                          </p-radioButton>
+                        </div>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="1. Pitanje" id="1">
+                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+                    </div>
+                    <div class="font">
+                      <div id="N1" class="pb-3">
+                        <p class="question pb-1">Nosna kongestija ili punoća</p>
+                        <p-radioButton name="N1" value="0" label="0" [(ngModel)]="N1" class="mr-3">
+                        </p-radioButton>Nije problem<br>
+                        <p-radioButton name="N1" value="1" label="1" [(ngModel)]="N1" class="mr-3">
+                        </p-radioButton>Vrlo blagi problem<br>
+                        <p-radioButton name="N1" value="2" label="2" [(ngModel)]="N1" class="mr-3">
+                        </p-radioButton>Umjereni problem<br>
+                        <p-radioButton name="N1" value="3" label="3" [(ngModel)]="N1" class="mr-3">
+                        </p-radioButton>Prilično težak problem<br>
+                        <p-radioButton name="N1" value="4" label="4" [(ngModel)]="N1" class="mr-3">
+                        </p-radioButton>Težak problem
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="2. Pitanje" id="2">
+                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+                    </div>
+                    <div class="font">
+                      <div id="N2" class="pb-3">
+                        <p class="question pb-1">Nosna blokada ili opstrukcija (začepljenost) </p>
+                        <p-radioButton name="N2" value="0" label="0" [(ngModel)]="N2" class="mr-3">
+                        </p-radioButton>Nije problem<br>
+                        <p-radioButton name="N2" value="1" label="1" [(ngModel)]="N2" class="mr-3">
+                        </p-radioButton>Vrlo blagi problem<br>
+                        <p-radioButton name="N2" value="2" label="2" [(ngModel)]="N2" class="mr-3">
+                        </p-radioButton>Umjereni problem<br>
+                        <p-radioButton name="N2" value="3" label="3" [(ngModel)]="N2" class="mr-3">
+                        </p-radioButton>Prilično težak problem<br>
+                        <p-radioButton name="N2" value="4" label="4" [(ngModel)]="N2" class="mr-3">
+                        </p-radioButton>Težak problem
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="3. Pitanje" id="3">
+                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+                    </div>
+                    <div class="font">
+                      <div id="N3" class="pb-3">
+                        <p class="question pb-1">Otežano disanje kroz nos</p>
+                        <p-radioButton name="N3" value="0" label="0" [(ngModel)]="N3" class="mr-3">
+                        </p-radioButton>Nije problem<br>
+                        <p-radioButton name="N3" value="1" label="1" [(ngModel)]="N3" class="mr-3">
+                        </p-radioButton>Vrlo blagi problem<br>
+                        <p-radioButton name="N3" value="2" label="2" [(ngModel)]="N3" class="mr-3">
+                        </p-radioButton>Umjereni problem<br>
+                        <p-radioButton name="N3" value="3" label="3" [(ngModel)]="N3" class="mr-3">
+                        </p-radioButton>Prilično težak problem<br>
+                        <p-radioButton name="N3" value="4" label="4" [(ngModel)]="N3" class="mr-3">
+                        </p-radioButton>Težak problem
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+
+                <p-tabPanel header="4. Pitanje" id="4">
+                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+                    </div>
+                    <div class="font">
+                      <div id="N4" class="pb-3">
+                        <p class="question pb-1">Otežano spavanje</p>
+                        <p-radioButton name="N4" value="0" label="0" [(ngModel)]="N4" class="mr-3">
+                        </p-radioButton>Nije problem<br>
+                        <p-radioButton name="N4" value="1" label="1" [(ngModel)]="N4" class="mr-3">
+                        </p-radioButton>Vrlo blagi problem<br>
+                        <p-radioButton name="N4" value="2" label="2" [(ngModel)]="N4" class="mr-3">
+                        </p-radioButton>Umjereni problem<br>
+                        <p-radioButton name="N4" value="3" label="3" [(ngModel)]="N4" class="mr-3">
+                        </p-radioButton>Prilično težak problem<br>
+                        <p-radioButton name="N4" value="4" label="4" [(ngModel)]="N4" class="mr-3">
+                        </p-radioButton>Težak problem
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="5. Pitanje" id="5">
+                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+                    </div>
+                    <div class="font">
+                      <div id="N5" class="pb-3">
+                        <p class="question pb-1">Nemogućnost dobivanja dovoljno zraka kroz nos tijekom vježbanja ili
+                          napora</p>
+                        <p-radioButton name="N5" value="0" label="0" [(ngModel)]="N5" class="mr-3">
+                        </p-radioButton>Nije problem<br>
+                        <p-radioButton name="N5" value="1" label="1" [(ngModel)]="N5" class="mr-3">
+                        </p-radioButton>Vrlo blagi problem<br>
+                        <p-radioButton name="N5" value="2" label="2" [(ngModel)]="N5" class="mr-3">
+                        </p-radioButton>Umjereni problem<br>
+                        <p-radioButton name="N5" value="3" label="3" [(ngModel)]="N5" class="mr-3">
+                        </p-radioButton>Prilično težak problem<br>
+                        <p-radioButton name="N5" value="4" label="4" [(ngModel)]="N5" class="mr-3">
+                        </p-radioButton>Težak problem
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+              </p-tabView>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </form>
+      <div class="ui-g-offset-1">
+        <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
+            class="ui-button-raised ui-button-rounded ui-button-success"></button></a>
+      </div>
+    </p-card>
+  </div>
+</div>

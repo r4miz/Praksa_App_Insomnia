@@ -19,6 +19,37 @@
     icon="pi pi-bars"></button>
 </div>
 <p-sidebar [(visible)]="sidebar" position="left" [style]="{width:'40em'}" dismissible>
+  <!--  
   <a routerLink="/"><img id="logo" src="assets/nav_icon.png" width="128" /></a>
-  
+  -->
+  <div class="p-grid">
+    <div class="p-col-10">
+      <p-accordion>
+        <p-accordionTab header="Tablet Formulari" [selected]="true">
+          <div class="pb-3">
+            <a (click)="close()" routerLink="/tab-stop-formular">STOP upitnik</a>
+          </div>
+          <div class="pb-3">
+            <a (click)="close()" routerLink="/tab-nose-formular">NOSE instrument</a>
+          </div>
+          <div>
+            <a (click)="close()" routerLink="/tab-epworth-ljestva">Epworthova ljestvica pospanosti</a>
+          </div>
+
+        </p-accordionTab>
+        <p-accordionTab header="Desktop Formulari">
+          <div class="pb-3">
+            <a (click)="close()" routerLink="/stop-formular">STOP upitnik</a>
+          </div>
+          <div class="pb-3">
+            <a (click)="close()" routerLink="/nose-formular">NOSE instrument</a>
+          </div>
+          <div>
+            <a (click)="close()" routerLink="/epworth-ljestva">Epworthova ljestvica pospanosti</a>
+          </div>
+        </p-accordionTab>
+      </p-accordion>
+    </div>
+  </div>
+
 </p-sidebar>

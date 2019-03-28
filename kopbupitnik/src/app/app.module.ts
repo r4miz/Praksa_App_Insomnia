@@ -24,6 +24,9 @@ import { TabletFormularStopComponent } from './tablet-formular-stop/tablet-formu
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { TabletFormularEpworthComponent } from './tablet-formular-epworth/tablet-formular-epworth.component';
 import { SidebarModule } from 'primeng/sidebar';
+import { TabletFormularNoseComponent } from './tablet-formular-nose/tablet-formular-nose.component';
+import { AccordionModule } from 'primeng/accordion';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { SidebarModule } from 'primeng/sidebar';
     FormularEpworthComponent,
     TabletFormularStopComponent,
     TabletFormularEpworthComponent,
+    TabletFormularNoseComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,8 @@ import { SidebarModule } from 'primeng/sidebar';
     RadioButtonModule, 
     MenubarModule,
     ScrollPanelModule,
-    SidebarModule
+    SidebarModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
