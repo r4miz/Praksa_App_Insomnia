@@ -7,12 +7,21 @@ body, html {
     background-color: #ffffff;
     background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
     height: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     font-size: 18px;
-
+    overflow: hidden;
 }
 
-
+.maxHeight {
+    height: 100%;
+    
+}
+.vertAlign {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
 .box {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

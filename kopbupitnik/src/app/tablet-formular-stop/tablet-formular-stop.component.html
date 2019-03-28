@@ -1,236 +1,226 @@
-    <p-card>
-      <p-header>
-        <div class="heading pb-3">
-          STOP upitnik
-        </div>
-      </p-header>
-      <form class="form-formular">
-        <div class="ui-g form-body">
-          <div class="ui-g-12 ui-g-md-6">
-            <p-scrollPanel [style]="{width: '100%', height: '500px'}">
-              <p-tabView orientation="left" (onChange)="handleChange($event)">
-                <p-tabPanel header="0.1 Opći podaci" id="0">
-                  <!--[headerStyle]="{'background-color': 'darkred'}"-->
+<div class="p-grid p-align-center vertAlign">
+  <div class="p-col heading pt-3 pb-3">
+    STOP upitnik
+  </div>
 
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        <span class="ui-inputgroup-addon"><i>Godine</i></span>
-                        <p-spinner class="tab" class="tab" placeholder="Vaša dob" name="dob" size="30" [(ngModel)]="dob"
-                          [min]="0" [max]="250" required>
-                        </p-spinner>
-                      </div>
-                      <div class="pb-3">
-                        <span class="ui-inputgroup-addon"><i>Visina u cm</i></span>
-                        <p-spinner class="tab" class="tab" placeholder="Vaša visina" name="visina" size="30"
-                          [(ngModel)]="visina" [min]="0" [max]="250" required>
-                        </p-spinner>
-                      </div>
-                      <div class="pb-3">
-                        <span class="ui-inputgroup-addon"><i>Kilaža u kg</i></span>
-                        <p-spinner class="tab" class="tab" placeholder="Vaša kilaža" name="tjelesnaMasa" size="30"
-                          [(ngModel)]="tjelesnaMasa" required>
-                        </p-spinner>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="0.1 Opći podaci" id="1">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-5">
-                        <span class="ui-inputgroup-addon"><i>Opseg vrata u cm</i></span>
-                        <p-spinner class="tab" placeholder="Vaš opseg vrata" name="opsegVrata" size="30"
-                          [(ngModel)]="opsegVrata" [min]="5" [max]="30">
-                        </p-spinner>
-                      </div>
-                      <div class="pb-5">
-                        <span class="ui-inputgroup-addon"><i>Opseg bokova u cm</i></span>
-                        <p-spinner class="tab" placeholder="Vaš opseg bokova" name="opsegBokova" size="30"
-                          [(ngModel)]="opsegBokova" [min]="5" [max]="150">
-                        </p-spinner>
-                      </div>
-                      <div class="pb-5">
-                        <span class="ui-inputgroup-addon"><i>Veličina ovratnika košulje</i></span>
-                        <p-dropdown name="selectedOvratnik" [options]="ovratniciKosulje" [(ngModel)]="selectedOvratnik"
-                          placeholder="Odaberite ili upišite svoju" [showClear]="true" editable="true"></p-dropdown>
-                      </div>
-                      <div class="pb-5">
-                        <span class="ui-inputgroup-addon"><i>Opseg struka u cm</i></span>
-                        <p-spinner class="tab" placeholder="Vaš opseg struka" name="opsegStruka" size="30"
-                          [(ngModel)]="opsegStruka" [min]="5" [max]="150">
-                        </p-spinner>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
+  <form class="form-formular maxHeight">
 
-                </p-tabPanel>
-                <p-tabPanel header="0.2 Opći podaci" id="2">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Vozite li?
-                        <p-radioButton (click)="checkVozacIfTrue()" name="vozac" value="1" label="DA"
-                          [(ngModel)]="vozac" class="mx-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkVozacIfTrue()" name="vozac" value="0" label="NE"
-                          [(ngModel)]="vozac">
-                        </p-radioButton>
-                      </div>
-                      <div class="pb-3" id="vozacTrue" hidden>
-                        <div class="pt-2 pb-3">
-                          Ako DA, jeste li imali prometnu nezgodu kao vozač?<br>
-                          <p-radioButton (click)="checkPrometnaIfTrue()" name="prometna" value="1" label="DA"
-                            [(ngModel)]="prometna" class="mr-3">
-                          </p-radioButton>
-                          <p-radioButton (click)="checkPrometnaIfTrue()" name="prometna" value="0" label="NE"
-                            [(ngModel)]="prometna">
-                          </p-radioButton>
-                        </div>
-                      </div>
-                      <div id="prometnaTrue" hidden>
-                        <span class="ui-inputgroup-addon"><i>Koliko puta?</i></span>
-                        <p-spinner class="tab" placeholder="Broj prometnih nezgoda" name="brojPrometnihNezgoda"
-                          size="30" [(ngModel)]="brojPrometnihNezgoda" [min]="0" [max]="50">
-                        </p-spinner>
-                      </div>
+    <p-scrollPanel [style]="{width: '100%', height: '100%;'}">
+      <p-tabView orientation="left" (onChange)="handleChange($event)">
+        <p-tabPanel header="0.1 Opći podaci" id="0">
+          <!--[headerStyle]="{'background-color': 'darkred'}"-->
 
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="1. Hrkanje" id="3">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Hrčete li glasno (glasnije nego što pričate ili dovoljno glasno da Vas se može čuti iza
-                        zatvorenih vrata)?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="hrkanje" value="1" label="DA"
-                          [(ngModel)]="hrkanje" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="hrkanje" value="0" label="NE"
-                          [(ngModel)]="hrkanje">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="2. Umor" id="4">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Osjećate li se često umorni, zamarate li se ili ste pospani tijekom dana?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="umor" value="1" label="DA"
-                          [(ngModel)]="umor" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="umor" value="0" label="NE"
-                          [(ngModel)]="umor">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="3. Zamijećenost" id="5">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Je li netko zamijetio da ste prestali disati tijekom spavanja?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="zamijecenost" value="1" label="DA"
-                          [(ngModel)]="zamijecenost" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="zamijecenost" value="0" label="NE"
-                          [(ngModel)]="zamijecenost">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="4. Hipertenzija" id="6" tooltip="Zdravstveni poremećaji i bolesti">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Imate li ili se liječite od povišenog arterijskog krvnog tlaka (hipertenzije)?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="hipertenzija" value="1" label="DA"
-                          [(ngModel)]="hipertenzija" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="hipertenzija" value="0" label="NE"
-                          [(ngModel)]="hipertenzija">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="5. Diabetes Mellitus" id="7" tooltip="Zdravstveni poremećaji i bolesti">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Imate li ili se liječite od šećerne bolesti (diabetes mellitus)?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="diabetes" value="1" label="DA"
-                          [(ngModel)]="diabetes" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="diabetes" value="0" label="NE"
-                          [(ngModel)]="diabetes">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="6. Depresija" id="8" tooltip="Zdravstveni poremećaji i bolesti">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Imate li ili se liječite od depresije?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="depresija" value="1" label="DA"
-                          [(ngModel)]="depresija" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="depresija" value="0" label="NE"
-                          [(ngModel)]="depresija">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="7. Astma" id="9" tooltip="Zdravstveni poremećaji i bolesti">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Imate li ili se liječite od astme?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="astma" value="1" label="DA"
-                          [(ngModel)]="astma" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="astma" value="0" label="NE"
-                          [(ngModel)]="astma">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="8. GERB" id="10" tooltip="Zdravstveni poremećaji i bolesti">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        Imate li ili se liječite od gastroezofagealnog refluksa (GERB)
-                        <i>(u narodu: često imati žgaravicu)</i>?<br>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="zgaravica" value="1" label="DA"
-                          [(ngModel)]="zgaravica" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton (click)="checkPrometnaIfTrue()" name="zgaravica" value="0" label="NE"
-                          [(ngModel)]="zgaravica">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-              </p-tabView>
-            </p-scrollPanel>
-          </div>
-        </div>
-      </form>
-      <div class="ui-g-offset-1">
-        <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
-            class="ui-button-raised ui-button-rounded ui-button-success"></button></a>
-      </div>
-    </p-card>
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                <span class="ui-inputgroup-addon"><i>Godine</i></span>
+                <p-spinner class="tab" class="tab" placeholder="Vaša dob" name="dob" size="30" [(ngModel)]="dob"
+                  [min]="0" [max]="250" required>
+                </p-spinner>
+              </div>
+              <div class="pb-3">
+                <span class="ui-inputgroup-addon"><i>Visina u cm</i></span>
+                <p-spinner class="tab" class="tab" placeholder="Vaša visina" name="visina" size="30"
+                  [(ngModel)]="visina" [min]="0" [max]="250" required>
+                </p-spinner>
+              </div>
+              <div class="pb-3">
+                <span class="ui-inputgroup-addon"><i>Kilaža u kg</i></span>
+                <p-spinner class="tab" class="tab" placeholder="Vaša kilaža" name="tjelesnaMasa" size="30"
+                  [(ngModel)]="tjelesnaMasa" required>
+                </p-spinner>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="0.1 Opći podaci" id="1">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-5">
+                <span class="ui-inputgroup-addon"><i>Opseg vrata u cm</i></span>
+                <p-spinner class="tab" placeholder="Vaš opseg vrata" name="opsegVrata" size="30"
+                  [(ngModel)]="opsegVrata" [min]="5" [max]="30">
+                </p-spinner>
+              </div>
+              <div class="pb-5">
+                <span class="ui-inputgroup-addon"><i>Opseg bokova u cm</i></span>
+                <p-spinner class="tab" placeholder="Vaš opseg bokova" name="opsegBokova" size="30"
+                  [(ngModel)]="opsegBokova" [min]="5" [max]="150">
+                </p-spinner>
+              </div>
+              <div class="pb-5">
+                <span class="ui-inputgroup-addon"><i>Veličina ovratnika košulje</i></span>
+                <p-dropdown name="selectedOvratnik" [options]="ovratniciKosulje" [(ngModel)]="selectedOvratnik"
+                  placeholder="Odaberite ili upišite svoju" [showClear]="true" editable="true"></p-dropdown>
+              </div>
+              <div class="pb-5">
+                <span class="ui-inputgroup-addon"><i>Opseg struka u cm</i></span>
+                <p-spinner class="tab" placeholder="Vaš opseg struka" name="opsegStruka" size="30"
+                  [(ngModel)]="opsegStruka" [min]="5" [max]="150">
+                </p-spinner>
+              </div>
+            </div>
+          </p-scrollPanel>
 
+        </p-tabPanel>
+        <p-tabPanel header="0.2 Opći podaci" id="2">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Vozite li?
+                <p-radioButton (click)="checkVozacIfTrue()" name="vozac" value="1" label="DA" [(ngModel)]="vozac"
+                  class="mx-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkVozacIfTrue()" name="vozac" value="0" label="NE" [(ngModel)]="vozac">
+                </p-radioButton>
+              </div>
+              <div class="pb-3" id="vozacTrue" hidden>
+                <div class="pt-2 pb-3">
+                  Ako DA, jeste li imali prometnu nezgodu kao vozač?<br>
+                  <p-radioButton (click)="checkPrometnaIfTrue()" name="prometna" value="1" label="DA"
+                    [(ngModel)]="prometna" class="mr-3">
+                  </p-radioButton>
+                  <p-radioButton (click)="checkPrometnaIfTrue()" name="prometna" value="0" label="NE"
+                    [(ngModel)]="prometna">
+                  </p-radioButton>
+                </div>
+              </div>
+              <div id="prometnaTrue" hidden>
+                <span class="ui-inputgroup-addon"><i>Koliko puta?</i></span>
+                <p-spinner class="tab" placeholder="Broj prometnih nezgoda" name="brojPrometnihNezgoda" size="30"
+                  [(ngModel)]="brojPrometnihNezgoda" [min]="0" [max]="50">
+                </p-spinner>
+              </div>
+
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="1. Hrkanje" id="3">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Hrčete li glasno (glasnije nego što pričate ili dovoljno glasno da Vas se može čuti iza
+                zatvorenih vrata)?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="hrkanje" value="1" label="DA" [(ngModel)]="hrkanje"
+                  class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="hrkanje" value="0" label="NE"
+                  [(ngModel)]="hrkanje">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="2. Umor" id="4">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Osjećate li se često umorni, zamarate li se ili ste pospani tijekom dana?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="umor" value="1" label="DA" [(ngModel)]="umor"
+                  class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="umor" value="0" label="NE" [(ngModel)]="umor">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="3. Zamijećenost" id="5">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Je li netko zamijetio da ste prestali disati tijekom spavanja?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="zamijecenost" value="1" label="DA"
+                  [(ngModel)]="zamijecenost" class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="zamijecenost" value="0" label="NE"
+                  [(ngModel)]="zamijecenost">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="4. Hipertenzija" id="6" tooltip="Zdravstveni poremećaji i bolesti">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Imate li ili se liječite od povišenog arterijskog krvnog tlaka (hipertenzije)?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="hipertenzija" value="1" label="DA"
+                  [(ngModel)]="hipertenzija" class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="hipertenzija" value="0" label="NE"
+                  [(ngModel)]="hipertenzija">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="5. Diabetes Mellitus" id="7" tooltip="Zdravstveni poremećaji i bolesti">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Imate li ili se liječite od šećerne bolesti (diabetes mellitus)?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="diabetes" value="1" label="DA"
+                  [(ngModel)]="diabetes" class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="diabetes" value="0" label="NE"
+                  [(ngModel)]="diabetes">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="6. Depresija" id="8" tooltip="Zdravstveni poremećaji i bolesti">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Imate li ili se liječite od depresije?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="depresija" value="1" label="DA"
+                  [(ngModel)]="depresija" class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="depresija" value="0" label="NE"
+                  [(ngModel)]="depresija">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="7. Astma" id="9" tooltip="Zdravstveni poremećaji i bolesti">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Imate li ili se liječite od astme?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="astma" value="1" label="DA" [(ngModel)]="astma"
+                  class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="astma" value="0" label="NE" [(ngModel)]="astma">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="8. GERB" id="10" tooltip="Zdravstveni poremećaji i bolesti">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                Imate li ili se liječite od gastroezofagealnog refluksa (GERB)
+                <i>(u narodu: često imati žgaravicu)</i>?<br>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="zgaravica" value="1" label="DA"
+                  [(ngModel)]="zgaravica" class="mr-3">
+                </p-radioButton>
+                <p-radioButton (click)="checkPrometnaIfTrue()" name="zgaravica" value="0" label="NE"
+                  [(ngModel)]="zgaravica">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+      </p-tabView>
+    </p-scrollPanel>
+    <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
+        class="ui-button-raised ui-button-rounded ui-button-success pt-1"></button></a>
+  </form>
+</div>
 
 
 <!--
