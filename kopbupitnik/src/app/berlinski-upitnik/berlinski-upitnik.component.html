@@ -1,0 +1,186 @@
+<div class="p-grid p-align-center vertAlign">
+  <div class="p-col heading pt-3 pb-3">
+    Berlinski upitnik
+  </div>
+
+  <form class="form-formular maxHeight">
+
+    <p-scrollPanel [style]="{width: '100%', height: '100%;'}">
+      <p-tabView orientation="left" (onChange)="handleChange($event)">
+        <p-tabPanel header="1. Pitanje" id="1">
+          <!--[headerStyle]="{'background-color': 'darkred'}"-->
+
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3" id="prvo">
+                <p style="font-weight: bold;">1.Jeste li se</p>
+                <p-radioButton name="prvo" label="udebljali" value="prvo1"
+                  [(ngModel)]="prvo" required></p-radioButton><br>
+                <p-radioButton name="prvo" label="smršavili" value="prvo2" [(ngModel)]="prvo" required>
+                </p-radioButton><br>
+                <p-radioButton name="prvo" label="bez promjene tjelesne težine" value="prvo3"
+                  [(ngModel)]="prvo" required></p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="2. Pitanje" id="2">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="drugo" class="pb-3">
+                <p style="font-weight: bold;">2.Hrčete li</p>
+                <p-radioButton name="drugo" label="da" value="drugo1"
+                  [(ngModel)]="drugo" required></p-radioButton><br>
+                <p-radioButton name="drugo" label="ne" value="drugo2" [(ngModel)]="drugo" required>
+                </p-radioButton><br>
+                <p-radioButton name="drugo" label="ne znam" value="drugo3"
+                  [(ngModel)]="drugo" required></p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+
+        </p-tabPanel>
+        <p-tabPanel header="3. Pitanje" id="3">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="trece" class="pb-3">
+                <p style="font-weight: bold;">3.Hrčete</p>
+                <p-radioButton name="trece" label="jednako glasno kao što dišete" value="trece1"
+                  [(ngModel)]="trece" required></p-radioButton><br>
+                <p-radioButton name="trece" label="jednako glasno kao što govorite" value="trece2" [(ngModel)]="trece" required>
+                </p-radioButton><br>
+                <p-radioButton name="trece" label="glasnije nego što pričate" value="trece3"
+                  [(ngModel)]="trece" required></p-radioButton><br>
+                <p-radioButton name="trece" label="veoma glasno" value="trece4"
+                  [(ngModel)]="trece" required></p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+
+        <p-tabPanel header="4. Pitanje" id="4">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="cetvrto" class="pb-3">
+                <p style="font-weight: bold;">4.Hrčete</p>
+                <p-radioButton name="cetvrto" label="skoro svaki dan" value="cetvrto1"
+                  [(ngModel)]="cetvrto" required></p-radioButton><br>
+                <p-radioButton name="cetvrto" label="3-4 puta tjedno" value="cetvrto2" [(ngModel)]="cetvrto" required>
+                </p-radioButton><br>
+                <p-radioButton name="cetvrto" label="1-2 puta tjedno" value="cetvrto3"
+                  [(ngModel)]="cetvrto" required></p-radioButton><br>
+                <p-radioButton name="cetvrto" label="1-2 puta mjesečno" value="cetvrto4"
+                  [(ngModel)]="cetvrto" required></p-radioButton><br>
+                <p-radioButton name="cetvrto" label="nikada ili skoro nikada" value="cetvrto5"
+                  [(ngModel)]="cetvrto" required></p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="5. Pitanje" id="5">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="peto" class="pb-3">
+                <p style="font-weight: bold;">5.Smeta li Vaše hrkanje drugima?</p>
+                <p-radioButton name="peto" label="da" value="peto1"
+                  [(ngModel)]="peto" required></p-radioButton><br>
+                <p-radioButton name="peto" label="ne" value="peto2" [(ngModel)]="peto" required>
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="6. Pitanje" id="6">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="sesto" class="pb-3">
+                <p style="font-weight: bold;">6.Vaš partner je primjetio da kratkotrajno prestanete disati</p>
+                <p-radioButton name="sesto" label="skoro svaki dan" value="sesto1" [(ngModel)]="sesto" 
+                  required></p-radioButton><br>
+                <p-radioButton name="sesto" label="3-4 puta tjedno" value="sesto2" [(ngModel)]="sesto"
+                  required></p-radioButton><br>
+                <p-radioButton name="sesto" label="1-2 puta tjedno" value="sesto3" [(ngModel)]="sesto"
+                  required></p-radioButton><br>
+                <p-radioButton name="sesto" label="1-2 puta mjesečno" value="sesto4" [(ngModel)]="sesto"
+                  required></p-radioButton><br>
+                <p-radioButton name="sesto" label="nikada ili skoro nikada" value="sesto5" [(ngModel)]="sesto"
+                  required></p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="7. Pitanje" id="7">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font"> 
+              <div id="sedmo" class="pb-3">
+                <p style="font-weight: bold;">7.Osjećate li se umorno poslije spavanja?</p>
+                <p-radioButton name="sedmo" label="skoro svaki dan" value="sedmo1" [(ngModel)]="sedmo" required>
+                </p-radioButton><br>
+                <p-radioButton name="sedmo" label="3-4 puta tjedno" value="sedmo2" [(ngModel)]="sedmo" required>
+                </p-radioButton><br>
+                <p-radioButton name="sedmo" label="1-2 puta tjedno" value="sedmo3" [(ngModel)]="sedmo" required>
+                </p-radioButton><br>
+                <p-radioButton name="sedmo" label="1-2 puta mejsečno" value="sedmo4" [(ngModel)]="sedmo" required>
+                </p-radioButton><br>
+                <p-radioButton name="sedmo" label="nikada ili skoro nikada" value="sedmo5" [(ngModel)]="sedmo" required>
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="8. Pitanje" id="8">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="osmo" class="pb-3">
+                <p style="font-weight: bold;">8.Osjećate li se umorno tijekom dana?</p>
+                <p-radioButton name="osmo" label="skoro svaki dan"
+                  value="osmo1" [(ngModel)]="osmo" required></p-radioButton><br>
+                <p-radioButton name="osmo"
+                  label="3-4 puta tjedno"
+                  value="osmo2" [(ngModel)]="osmo" required></p-radioButton><br>
+                <p-radioButton name="osmo" label="1-2 puta tjedno" value="osmo3"
+                  [(ngModel)]="osmo" required></p-radioButton><br>
+                <p-radioButton name="osmo" label="1-2 puta mjesečno" value="osmo4" [(ngModel)]="osmo"
+                  required></p-radioButton><br>
+                <p-radioButton name="osmo" label="nikada ili skoro nikada"
+                  value="osmo5" [(ngModel)]="osmo" required></p-radioButton><br>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="9. Pitanje" id="9">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="deveto" class="pb-3">
+                <p style="font-weight:bold;">9.Jeste li ikada zaspali za volanom?</p>
+                <p-radioButton name="deveto" label="da" value="deveto1" [(ngModel)]="deveto" required>
+                </p-radioButton><br>
+                <p-radioButton name="deveto" label="ne" value="deveto2" [(ngModel)]="deveto"
+                  required></p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="10. Pitanje" id="10">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="deseto" class="pb-3">
+                <p style="font-weight:bold;">10.Imate li povišen arterijski tlak?</p>
+                <p-radioButton name="deseto" label="da" value="deseto1" [(ngModel)]="deseto"
+                  required></p-radioButton><br>
+                <p-radioButton name="deseto" label="ne" value="deseto2" [(ngModel)]="deseto"
+                  required></p-radioButton><br>
+                <p-radioButton name="deseto" label="ne znam" value="deseto3" [(ngModel)]="deseto"
+                  required></p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+      </p-tabView>
+    </p-scrollPanel>
+    <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
+        class="ui-button-raised ui-button-rounded ui-button-success pt-1"></button></a>
+  </form>
+</div>
+
+

@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 
  @Component ({
      templateUrl:'./prije.component.html',
-     styleUrls: ['./prije.component.css']
+     styleUrls: ['./prije.component.scss']
  })
 
  export class PrijeComponent implements OnInit{

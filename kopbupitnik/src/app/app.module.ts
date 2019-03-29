@@ -27,6 +27,9 @@ import { SidebarModule } from 'primeng/sidebar';
 import { TabletFormularNoseComponent } from './tablet-formular-nose/tablet-formular-nose.component';
 import { AccordionModule } from 'primeng/accordion';
 import { TabletSimptomiComponent } from './tablet-simptomi/tablet-simptomi.component';
+import { BerlinskiUpitnikComponent } from './berlinski-upitnik/berlinski-upitnik.component';
+import { NakonComponent } from './nakon_spavanja/nakon.component';
+import { PrijeComponent} from './prije_spavanja/prije.component';
 
 
 @NgModule({
@@ -41,6 +44,9 @@ import { TabletSimptomiComponent } from './tablet-simptomi/tablet-simptomi.compo
     TabletFormularEpworthComponent,
     TabletFormularNoseComponent,
     TabletSimptomiComponent,
+    BerlinskiUpitnikComponent,
+    NakonComponent,
+    PrijeComponent
   ],
   imports: [
     BrowserModule,
