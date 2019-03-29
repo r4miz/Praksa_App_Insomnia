@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { TabletFormularStopComponent } from './tablet-formular-stop/tablet-formular-stop.component';
 import { TabletFormularEpworthComponent } from './tablet-formular-epworth/tablet-formular-epworth.component';
 import { TabletFormularNoseComponent } from './tablet-formular-nose/tablet-formular-nose.component';
+import { TabletSimptomiComponent } from './tablet-simptomi/tablet-simptomi.component';
 
 
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'stop-formular', component: FormularStopComponent },
   { path: 'tab-stop-formular', component: TabletFormularStopComponent },
   { path: 'tab-epworth-ljestva', component: TabletFormularEpworthComponent },
-  { path: 'tab-nose-formular', component: TabletFormularNoseComponent}
+  { path: 'tab-nose-formular', component: TabletFormularNoseComponent},
+  { path: 'tab-simptomi-formular', component: TabletSimptomiComponent}
 ];
 
 @NgModule({

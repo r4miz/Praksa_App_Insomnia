@@ -1,197 +1,185 @@
-<div class="ui-g-12" style="margin-top: -1rem;">
-  <div class="box">
-    <p-card>
-      <p-header>
-        <div class="heading pb-3">
-          Epworthova ljestvica pospanosti
-        </div>
-      </p-header>
-      <form class="form-formular">
-        <div class="ui-g form-body">
-          <div class="ui-g-12 ui-g-md-6">
-            <p-scrollPanel [style]="{width: '100%', height: '500px'}">
-              <p-tabView orientation="left" (onChange)="handleChange($event)">
-                <p-tabPanel header="Upute" id="0">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div class="font">
-                      <div class="pb-3">
-                        <p>
-                          Koliko često Vam se događa da osjetite potrebu za spavanjem u niže navedenim situacijama?
-                          U ovim se primjerima radi o
-                          uobičajenim dnevnim aktivnostima. Čak i ako se u skoro vrijeme niste našli u nekoj od niže
-                          navedenih situacija, pokušajte
-                          zamisliti kako biste se osjećali. Uporabite predložene brojeve kojima ćete najbolje
-                          ocijeniti kako se u datom trenutku
-                          osjećate.
-                        </p>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="1. Pitanje" id="1">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP1" class="pb-3">
-                        <p>Sjedite i čitate</p>
-                        <p-radioButton name="EP1" value="0" label="0" [(ngModel)]="EP1" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP1" value="1" label="1" [(ngModel)]="EP1" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP1" value="2" label="2" [(ngModel)]="EP1" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP1" value="3" label="3" [(ngModel)]="EP1">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="2. Pitanje" id="2">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP2" class="pb-3">
-                        <p>Gledate TV</p>
-                        <p-radioButton name="EP2" value="0" label="0" [(ngModel)]="EP2" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP2" value="1" label="1" [(ngModel)]="EP2" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP2" value="2" label="2" [(ngModel)]="EP2" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP2" value="3" label="3" [(ngModel)]="EP2">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="3. Pitanje" id="3">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP3" class="pb-3">
-                        <p>Sjedite na sastanku (predstavi ili sl. na kojemu aktivno ne sudjelujete)</p>
-                        <p-radioButton name="EP3" value="0" label="0" [(ngModel)]="EP3" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP3" value="1" label="1" [(ngModel)]="EP3" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP3" value="2" label="2" [(ngModel)]="EP3" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP3" value="3" label="3" [(ngModel)]="EP3">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-
-                <p-tabPanel header="4. Pitanje" id="4">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP4" class="pb-3">
-                        <p>Vozite se u automobilu kao putnik sat vremena neprekidne vožnje</p>
-                        <p-radioButton name="EP4" value="0" label="0" [(ngModel)]="EP4" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP4" value="1" label="1" [(ngModel)]="EP4" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP4" value="2" label="2" [(ngModel)]="EP4" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP4" value="3" label="3" [(ngModel)]="EP4">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="5. Pitanje" id="5">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP5" class="pb-3">
-                        <p>Ležite i odmarate se u dnevnom boravku kad Vam prilike dopuste</p>
-                        <p-radioButton name="EP5" value="0" label="0" [(ngModel)]="EP5" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP5" value="1" label="1" [(ngModel)]="EP5" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP5" value="2" label="2" [(ngModel)]="EP5" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP5" value="3" label="3" [(ngModel)]="EP5">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="6. Pitanje" id="6">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP6" class="pb-3">
-                        <p>Sjedite i razgovarate s nekim</p>
-                        <p-radioButton name="EP6" value="0" label="0" [(ngModel)]="EP6" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP6" value="1" label="1" [(ngModel)]="EP6" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP6" value="2" label="2" [(ngModel)]="EP6" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP6" value="3" label="3" [(ngModel)]="EP6">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="7. Pitanje" id="7">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP7" class="pb-3">
-                        <p>Sjedite nakon obroka bez da ste popili alkoholno piće</p>
-                        <p-radioButton name="EP7" value="0" label="0" [(ngModel)]="EP7" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP7" value="1" label="1" [(ngModel)]="EP7" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP7" value="2" label="2" [(ngModel)]="EP7" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP7" value="3" label="3" [(ngModel)]="EP7">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-                <p-tabPanel header="8. Pitanje" id="8">
-                  <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-                    <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-                    </div>
-                    <div class="font">
-                      <div id="EP8" class="pb-3">
-                        <p>Nalazite se u automobilu zaustavljeni i stojite u gužvi nekoliko minuta</p>
-                        <p-radioButton name="EP8" value="0" label="0" [(ngModel)]="EP8" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP8" value="1" label="1" [(ngModel)]="EP8" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP8" value="2" label="2" [(ngModel)]="EP8" class="mr-3">
-                        </p-radioButton>
-                        <p-radioButton name="EP8" value="3" label="3" [(ngModel)]="EP8">
-                        </p-radioButton>
-                      </div>
-                    </div>
-                  </p-scrollPanel>
-                </p-tabPanel>
-              </p-tabView>
-            </p-scrollPanel>
-          </div>
-        </div>
-      </form>
-      <div class="ui-g-offset-1">
-        <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
-            class="ui-button-raised ui-button-rounded ui-button-success"></button></a>
-      </div>
-    </p-card>
+<div class="p-grid p-align-center vertAlign">
+  <div class="p-col heading pt-3 pb-3">
+    Epworthova ljestvica pospanosti
   </div>
+  <form class="form-formular maxHeight">
+    <p-scrollPanel [style]="{width: '100%', height: '500px'}">
+      <p-tabView orientation="left" (onChange)="handleChange($event)">
+        <p-tabPanel header="Upute" id="0">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div class="pb-3">
+                <p>
+                  Koliko često Vam se događa da osjetite potrebu za spavanjem u niže navedenim situacijama?
+                  U ovim se primjerima radi o
+                  uobičajenim dnevnim aktivnostima. Čak i ako se u skoro vrijeme niste našli u nekoj od niže
+                  navedenih situacija, pokušajte
+                  zamisliti kako biste se osjećali. Uporabite predložene brojeve kojima ćete najbolje
+                  ocijeniti kako se u datom trenutku
+                  osjećate.
+                </p>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="1. Pitanje" id="1">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP1" class="pb-3">
+                <p>Sjedite i čitate</p>
+                <p-radioButton name="EP1" value="0" label="0" [(ngModel)]="EP1" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP1" value="1" label="1" [(ngModel)]="EP1" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP1" value="2" label="2" [(ngModel)]="EP1" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP1" value="3" label="3" [(ngModel)]="EP1">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="2. Pitanje" id="2">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP2" class="pb-3">
+                <p>Gledate TV</p>
+                <p-radioButton name="EP2" value="0" label="0" [(ngModel)]="EP2" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP2" value="1" label="1" [(ngModel)]="EP2" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP2" value="2" label="2" [(ngModel)]="EP2" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP2" value="3" label="3" [(ngModel)]="EP2">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="3. Pitanje" id="3">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP3" class="pb-3">
+                <p>Sjedite na sastanku (predstavi ili sl. na kojemu aktivno ne sudjelujete)</p>
+                <p-radioButton name="EP3" value="0" label="0" [(ngModel)]="EP3" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP3" value="1" label="1" [(ngModel)]="EP3" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP3" value="2" label="2" [(ngModel)]="EP3" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP3" value="3" label="3" [(ngModel)]="EP3">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+
+        <p-tabPanel header="4. Pitanje" id="4">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP4" class="pb-3">
+                <p>Vozite se u automobilu kao putnik sat vremena neprekidne vožnje</p>
+                <p-radioButton name="EP4" value="0" label="0" [(ngModel)]="EP4" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP4" value="1" label="1" [(ngModel)]="EP4" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP4" value="2" label="2" [(ngModel)]="EP4" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP4" value="3" label="3" [(ngModel)]="EP4">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="5. Pitanje" id="5">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP5" class="pb-3">
+                <p>Ležite i odmarate se u dnevnom boravku kad Vam prilike dopuste</p>
+                <p-radioButton name="EP5" value="0" label="0" [(ngModel)]="EP5" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP5" value="1" label="1" [(ngModel)]="EP5" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP5" value="2" label="2" [(ngModel)]="EP5" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP5" value="3" label="3" [(ngModel)]="EP5">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="6. Pitanje" id="6">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP6" class="pb-3">
+                <p>Sjedite i razgovarate s nekim</p>
+                <p-radioButton name="EP6" value="0" label="0" [(ngModel)]="EP6" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP6" value="1" label="1" [(ngModel)]="EP6" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP6" value="2" label="2" [(ngModel)]="EP6" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP6" value="3" label="3" [(ngModel)]="EP6">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="7. Pitanje" id="7">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP7" class="pb-3">
+                <p>Sjedite nakon obroka bez da ste popili alkoholno piće</p>
+                <p-radioButton name="EP7" value="0" label="0" [(ngModel)]="EP7" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP7" value="1" label="1" [(ngModel)]="EP7" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP7" value="2" label="2" [(ngModel)]="EP7" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP7" value="3" label="3" [(ngModel)]="EP7">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="8. Pitanje" id="8">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            </div>
+            <div class="font">
+              <div id="EP8" class="pb-3">
+                <p>Nalazite se u automobilu zaustavljeni i stojite u gužvi nekoliko minuta</p>
+                <p-radioButton name="EP8" value="0" label="0" [(ngModel)]="EP8" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP8" value="1" label="1" [(ngModel)]="EP8" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP8" value="2" label="2" [(ngModel)]="EP8" class="mr-3">
+                </p-radioButton>
+                <p-radioButton name="EP8" value="3" label="3" [(ngModel)]="EP8">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+      </p-tabView>
+    </p-scrollPanel>
+    <a routerLink="/"><button pButton type="submit" icon="pi pi-check" label="Završi"
+        class="ui-button-raised ui-button-rounded ui-button-success formSubmitButton pt-1"></button></a>
+  </form>
 </div>
 
 

@@ -12,20 +12,20 @@
 
           <p-scrollPanel [style]="{width: '100%', height: '427px'}">
             <div class="font">
-              <div class="pb-3">
-                <span class="ui-inputgroup-addon"><i>Godine</i></span>
+              <div class="pb-4">
+                <span class="ui-inputgroup-addon"><i>Godine</i></span><br>
                 <p-spinner class="tab" class="tab" placeholder="Vaša dob" name="dob" size="30" [(ngModel)]="dob"
                   [min]="0" [max]="250" required>
                 </p-spinner>
               </div>
-              <div class="pb-3">
-                <span class="ui-inputgroup-addon"><i>Visina u cm</i></span>
+              <div class="pb-4">
+                <span class="ui-inputgroup-addon"><i>Visina u cm</i></span><br>
                 <p-spinner class="tab" class="tab" placeholder="Vaša visina" name="visina" size="30"
                   [(ngModel)]="visina" [min]="0" [max]="250" required>
                 </p-spinner>
               </div>
-              <div class="pb-3">
-                <span class="ui-inputgroup-addon"><i>Kilaža u kg</i></span>
+              <div class="pb-4">
+                <span class="ui-inputgroup-addon"><i>Kilaža u kg</i></span><br>
                 <p-spinner class="tab" class="tab" placeholder="Vaša kilaža" name="tjelesnaMasa" size="30"
                   [(ngModel)]="tjelesnaMasa" required>
                 </p-spinner>
@@ -36,25 +36,25 @@
         <p-tabPanel header="0.1 Opći podaci" id="1">
           <p-scrollPanel [style]="{width: '100%', height: '427px'}">
             <div class="font">
-              <div class="pb-5">
-                <span class="ui-inputgroup-addon"><i>Opseg vrata u cm</i></span>
+              <div class="pb-4">
+                <span class="ui-inputgroup-addon"><i>Opseg vrata u cm</i></span><br>
                 <p-spinner class="tab" placeholder="Vaš opseg vrata" name="opsegVrata" size="30"
                   [(ngModel)]="opsegVrata" [min]="5" [max]="30">
                 </p-spinner>
               </div>
-              <div class="pb-5">
-                <span class="ui-inputgroup-addon"><i>Opseg bokova u cm</i></span>
+              <div class="pb-4">
+                <span class="ui-inputgroup-addon"><i>Opseg bokova u cm</i></span><br>
                 <p-spinner class="tab" placeholder="Vaš opseg bokova" name="opsegBokova" size="30"
                   [(ngModel)]="opsegBokova" [min]="5" [max]="150">
                 </p-spinner>
               </div>
-              <div class="pb-5">
-                <span class="ui-inputgroup-addon"><i>Veličina ovratnika košulje</i></span>
+              <div class="pb-4">
+                <span class="ui-inputgroup-addon"><i>Veličina ovratnika košulje</i></span><br>
                 <p-dropdown name="selectedOvratnik" [options]="ovratniciKosulje" [(ngModel)]="selectedOvratnik"
                   placeholder="Odaberite ili upišite svoju" [showClear]="true" editable="true"></p-dropdown>
               </div>
-              <div class="pb-5">
-                <span class="ui-inputgroup-addon"><i>Opseg struka u cm</i></span>
+              <div class="pb-4">
+                <span class="ui-inputgroup-addon"><i>Opseg struka u cm</i></span><br>
                 <p-spinner class="tab" placeholder="Vaš opseg struka" name="opsegStruka" size="30"
                   [(ngModel)]="opsegStruka" [min]="5" [max]="150">
                 </p-spinner>
@@ -86,7 +86,7 @@
                 </div>
               </div>
               <div id="prometnaTrue" hidden>
-                <span class="ui-inputgroup-addon"><i>Koliko puta?</i></span>
+                <span class="ui-inputgroup-addon"><i>Koliko puta?</i></span><br>
                 <p-spinner class="tab" placeholder="Broj prometnih nezgoda" name="brojPrometnihNezgoda" size="30"
                   [(ngModel)]="brojPrometnihNezgoda" [min]="0" [max]="50">
                 </p-spinner>
@@ -217,8 +217,8 @@
         </p-tabPanel>
       </p-tabView>
     </p-scrollPanel>
-    <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
-        class="ui-button-raised ui-button-rounded ui-button-success pt-1"></button></a>
+    <a routerLink="/"><button pButton type="submit" icon="pi pi-check" label="Završi"
+        class="ui-button-raised ui-button-rounded ui-button-success pt-1 formSubmitButton"></button></a>
   </form>
 </div>
 

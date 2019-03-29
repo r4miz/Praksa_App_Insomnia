@@ -1,0 +1,370 @@
+<div class="p-grid p-align-center vertAlign">
+  <div class="p-col heading pt-3 pb-3">
+    Simptomi
+  </div>
+
+  <form class="form-formular maxHeight">
+
+    <p-scrollPanel [style]="{width: '100%', height: '100%;'}">
+      <p-tabView orientation="left" (onChange)="handleChange($event)">
+        <p-tabPanel header="1 Pitanje" id="0">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI1" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Gušenje</strong> / <strong>Davljenje</strong></p>
+                <p-radioButton name="SI1" value="3" label="Uvijek" [(ngModel)]="SI1" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI1" value="2" label="Većinom" [(ngModel)]="SI1" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI1" value="1" label="Povremeno" [(ngModel)]="SI1" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI1" value="0" label="Nikada" [(ngModel)]="SI1">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="2 Pitanje" id="1">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI2" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Nedostatak daha</strong></p>
+                <p-radioButton name="SI2" value="3" label="Uvijek" [(ngModel)]="SI2" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI2" value="2" label="Većinom" [(ngModel)]="SI2" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI2" value="1" label="Povremeno" [(ngModel)]="SI2" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI2" value="0" label="Nikada" [(ngModel)]="SI2">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="3 Pitanje" id="2">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI3" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Bol u prsima</strong></p>
+                <p-radioButton name="SI3" value="3" label="Uvijek" [(ngModel)]="SI3" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI3" value="2" label="Većinom" [(ngModel)]="SI3" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI3" value="1" label="Povremeno" [(ngModel)]="SI3" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI3" value="0" label="Nikada" [(ngModel)]="SI3">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="4 Pitanje" id="3">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI4" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Lupanje srca</strong></p>
+                <p-radioButton name="SI4" value="3" label="Uvijek" [(ngModel)]="SI4" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI4" value="2" label="Većinom" [(ngModel)]="SI4" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI4" value="1" label="Povremeno" [(ngModel)]="SI4" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI4" value="0" label="Nikada" [(ngModel)]="SI4">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="5 Pitanje" id="4">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI5" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Noćno preznojavanje</strong></p>
+                <p-radioButton name="SI5" value="3" label="Uvijek" [(ngModel)]="SI5" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI5" value="2" label="Većinom" [(ngModel)]="SI5" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI5" value="1" label="Povremeno" [(ngModel)]="SI5" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI5" value="0" label="Nikada" [(ngModel)]="SI5">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="6 Pitanje" id="5">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI6" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Učestalo mokrenje</strong></p>
+                <p-radioButton name="SI6" value="3" label="Uvijek" [(ngModel)]="SI6" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI6" value="2" label="Većinom" [(ngModel)]="SI6" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI6" value="1" label="Povremeno" [(ngModel)]="SI6" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI6" value="0" label="Nikada" [(ngModel)]="SI6">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="7 Pitanje" id="6">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI7" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Bacanje i okretanje</strong></p>
+                <p-radioButton name="SI7" value="3" label="Uvijek" [(ngModel)]="SI7" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI7" value="2" label="Većinom" [(ngModel)]="SI7" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI7" value="1" label="Povremeno" [(ngModel)]="SI7" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI7" value="0" label="Nikada" [(ngModel)]="SI7">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="8 Pitanje" id="7">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI8" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Trzaji tijela ili nogu</strong></p>
+                <p-radioButton name="SI8" value="3" label="Uvijek" [(ngModel)]="SI8" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI8" value="2" label="Većinom" [(ngModel)]="SI8" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI8" value="1" label="Povremeno" [(ngModel)]="SI8" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI8" value="0" label="Nikada" [(ngModel)]="SI8">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="9 Pitanje" id="8">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI9" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Škripanje zubima</strong></p>
+                <p-radioButton name="SI9" value="3" label="Uvijek" [(ngModel)]="SI9" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI9" value="2" label="Većinom" [(ngModel)]="SI9" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI9" value="1" label="Povremeno" [(ngModel)]="SI9" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI9" value="0" label="Nikada" [(ngModel)]="SI9">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="10 Pitanje" id="9">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI10" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Hodanje u snu</strong></p>
+                <p-radioButton name="SI10" value="3" label="Uvijek" [(ngModel)]="SI10" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI10" value="2" label="Većinom" [(ngModel)]="SI10" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI10" value="1" label="Povremeno" [(ngModel)]="SI10" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI10" value="0" label="Nikada" [(ngModel)]="SI10">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="11 Pitanje" id="10">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI11" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Noćne more</strong></p>
+                <p-radioButton name="SI11" value="3" label="Uvijek" [(ngModel)]="SI11" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI11" value="2" label="Većinom" [(ngModel)]="SI11" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI11" value="1" label="Povremeno" [(ngModel)]="SI11" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI11" value="0" label="Nikada" [(ngModel)]="SI11">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="12 Pitanje" id="11">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI12" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Padanje iz kreveta</strong></p>
+                <p-radioButton name="SI12" value="3" label="Uvijek" [(ngModel)]="SI12" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI12" value="2" label="Većinom" [(ngModel)]="SI12" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI12" value="1" label="Povremeno" [(ngModel)]="SI12" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI12" value="0" label="Nikada" [(ngModel)]="SI12">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="13 Pitanje" id="12">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI13" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Bol u leđima dok spavate</strong></p>
+                <p-radioButton name="SI13" value="3" label="Uvijek" [(ngModel)]="SI13" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI13" value="2" label="Većinom" [(ngModel)]="SI13" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI13" value="1" label="Povremeno" [(ngModel)]="SI13" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI13" value="0" label="Nikada" [(ngModel)]="SI13">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="14 Pitanje" id="13">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI14" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Žgaravica</strong></p>
+                <p-radioButton name="SI14" value="3" label="Uvijek" [(ngModel)]="SI14" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI14" value="2" label="Većinom" [(ngModel)]="SI14" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI14" value="1" label="Povremeno" [(ngModel)]="SI14" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI14" value="0" label="Nikada" [(ngModel)]="SI14">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="15 Pitanje" id="14">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI15" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Anksioznost</strong> / <strong>Napad panike</strong></p>
+                <p-radioButton name="SI15" value="3" label="Uvijek" [(ngModel)]="SI15" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI15" value="2" label="Većinom" [(ngModel)]="SI15" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI15" value="1" label="Povremeno" [(ngModel)]="SI15" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI15" value="0" label="Nikada" [(ngModel)]="SI15">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="16 Pitanje" id="15">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI16" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Hladna stopala noću</strong></p>
+                <p-radioButton name="SI16" value="3" label="Uvijek" [(ngModel)]="SI16" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI16" value="2" label="Većinom" [(ngModel)]="SI16" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI16" value="1" label="Povremeno" [(ngModel)]="SI16" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI16" value="0" label="Nikada" [(ngModel)]="SI16">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="17 Pitanje" id="16">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI17" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Jutarnje glavobolje</strong></p>
+                <p-radioButton name="SI17" value="3" label="Uvijek" [(ngModel)]="SI17" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI17" value="2" label="Većinom" [(ngModel)]="SI17" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI17" value="1" label="Povremeno" [(ngModel)]="SI17" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI17" value="0" label="Nikada" [(ngModel)]="SI17">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="18 Pitanje" id="17">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI18" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p><strong>&diams; Suha usta ujutro</strong></p>
+                <p-radioButton name="SI18" value="3" label="Uvijek" [(ngModel)]="SI18" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI18" value="2" label="Većinom" [(ngModel)]="SI18" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI18" value="1" label="Povremeno" [(ngModel)]="SI18" class="mr-3">
+                </p-radioButton><br>
+                <p-radioButton name="SI18" value="0" label="Nikada" [(ngModel)]="SI18">
+                </p-radioButton>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="19 Pitanje" id="18">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="SI19" class="pb-3">
+                <p class="pb-3">Imate li u zadnjih šest mjeseci tijekom spavanja probleme s: <i>(odaberite)</i></p>
+                <p class="pb-3"><strong>&diams; Ostala neobična ponašanja</strong></p>
+                <div class="p-grid">
+                  <div class="p-col">
+                    <p-radioButton name="SI19" value="3" (click)="checkTextAreaContent()" label="Uvijek"
+                      [(ngModel)]="SI19" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="SI19" value="2" (click)="checkTextAreaContent()" label="Većinom"
+                      [(ngModel)]="SI19" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="SI19" value="1" (click)="checkTextAreaContent()" label="Povremeno"
+                      [(ngModel)]="SI19" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="SI19" value="0" (click)="checkTextAreaContent()" label="Nikada"
+                      [(ngModel)]="SI19" class="pb-3">
+                    </p-radioButton>
+                  </div>
+                  <div class="p-col">
+                    <textarea id="float-input" name="SI19TextArea" rows="4" cols="30" [(ngModel)]="SI19TextArea"
+                      pInputTextarea autoResize="autoResize" readonly placeholder="Opišite što"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+
+      </p-tabView>
+    </p-scrollPanel>
+    <a routerLink="/"><button pButton type="submit" icon="pi pi-check" label="Završi"
+        class="ui-button-raised ui-button-rounded ui-button-success pt-1 formSubmitButton"></button></a>
+  </form>
+</div>

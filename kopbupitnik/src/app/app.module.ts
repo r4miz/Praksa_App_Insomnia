@@ -26,6 +26,7 @@ import { TabletFormularEpworthComponent } from './tablet-formular-epworth/tablet
 import { SidebarModule } from 'primeng/sidebar';
 import { TabletFormularNoseComponent } from './tablet-formular-nose/tablet-formular-nose.component';
 import { AccordionModule } from 'primeng/accordion';
+import { TabletSimptomiComponent } from './tablet-simptomi/tablet-simptomi.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { AccordionModule } from 'primeng/accordion';
     TabletFormularStopComponent,
     TabletFormularEpworthComponent,
     TabletFormularNoseComponent,
+    TabletSimptomiComponent,
   ],
   imports: [
     BrowserModule,

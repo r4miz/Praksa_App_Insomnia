@@ -14,6 +14,22 @@ export class TabletFormularNoseComponent implements OnInit {
   N3: number = null;
   N4: number = null;
   N5: number = null;
+  number_explanation = `<div>
+    <strong> 0 &diams; neću</strong>
+osjećati potrebu za spavanjem(drijemanjem, kunjanjem)
+  </div>
+  <div>
+  <strong>1 &diams; </strong> imat ću <strong>laganu</strong> potrebu za spavanjem(drijemanjem,
+    kunjanjem)
+    </div>
+    <div>
+    <strong>2 &diams; </strong> imat ću <strong>veliku</strong> potrebu za spavanjem(drijemanjem,
+      kunjanjem)
+      </div>
+      <div>
+      <strong>3 &diams; </strong> imat ću <strong>neodoljivu</strong> potrebu za spavanjem(drijemanjem,
+        kunjanjem)
+        </div><br>`;
 
   constructor() { }
 
