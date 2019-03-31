@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-tablet-simptomi',
   templateUrl: './tablet-simptomi.component.html',
   styleUrls: ['./tablet-simptomi.component.scss']
 })
-export class TabletSimptomiComponent implements OnInit {
+export class TabletSimptomiComponent implements OnInit, AfterViewInit {
+  
+  divider: number = 11;
   SI1: number = null;
   SI2: number = null;
   SI3: number = null;
@@ -31,14 +33,14 @@ export class TabletSimptomiComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  checkTextAreaContent(){
+  
+  checkTextAreaContent() {
     var txt = document.getElementById('float-input');
     console.log(txt);
-    if(this.SI19 != 0){
+    if (this.SI19 != 0) {
       txt.removeAttribute('readonly');
     }
-    else{
+    else {
       txt.setAttribute('readonly', 'true');
     }
   }
@@ -67,7 +69,43 @@ export class TabletSimptomiComponent implements OnInit {
     else {
       items[18].removeAttribute("style");
     }
-    
+
   }
+
+  // paginator begin, options: true -> hide page, false -> unhide page
+  ngAfterViewInit(): void {
+    var items = document.getElementsByTagName("li");
+    this.handleOverflowTabsAfterDivider(items, true);
+  }
+
+  // after 11th question hide or unhide
+  handleOverflowTabsAfterDivider(items, decision: boolean) {
+    if (items.length > this.divider) {
+      for (let index = this.divider; index < items.length; index++) {
+        items[index].hidden = decision;
+      }
+    }
+  }
+
+  // before 11th question hide or unhide
+  handleOverflowTabsBeforeDivider(items, decision: boolean) {
+    if (items.length > this.divider) {
+      for (let index = 0; index < this.divider; index++) {
+        items[index].hidden = decision;
+      }
+    }
+  }
+
+  next() {
+    var items = document.getElementsByTagName("li");
+    this.handleOverflowTabsBeforeDivider(items, true);
+    this.handleOverflowTabsAfterDivider(items, false);
+  }
+  prev() {
+    var items = document.getElementsByTagName("li");
+    this.handleOverflowTabsAfterDivider(items, true);
+    this.handleOverflowTabsBeforeDivider(items, false);
+  }
+  // paginator end
 
 }
