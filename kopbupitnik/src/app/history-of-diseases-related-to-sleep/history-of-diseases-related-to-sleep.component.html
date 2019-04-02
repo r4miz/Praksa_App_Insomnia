@@ -1,0 +1,381 @@
+<nav>
+  <ul>
+    <li><a routerLink="/HomePage">Početna stranica</a></li>
+    <li style="float:right; "><a style="color:red" class="active" routerLink="/Login">Logout</a></li>
+  </ul>
+</nav>
+<div class="ui-fluid tablet">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <div class="box">
+        <p-header>
+          <div class="heading pb-3">
+            <h1>Povijest bolesti za poremećaj spavanja</h1>
+          </div>
+        </p-header><br>
+        <form class="form-formular">
+          <div class="ui-g form-body">
+            <div class="ui-g-12 ui-g-md-6">
+              <p-tabView orientation="left">
+                <p-tabPanel header="1. Pitanje" id='1'>
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP1" class="pb-3">
+                        1. Koliko sati prosječno spavate tijekom noći? <br><br>
+                        <p-spinner [inputStyle] = "{'height':'60px', 'font-size':'40px'}" class="tab" size="30" [min]="0" [max]="15" name="HoursOfSleepPerNight" 
+                          [(ngModel)]="HistoryOfDiseases.HoursOfSleepPerNight" placeholder="Broj sati" (onChange)="change(HistoryOfDiseases.HoursOfSleepPerNight,2)" ></p-spinner>  <br><br>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="2. Pitanje" id="2">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+                    <div class="font">
+                      <div id="EP2" class="pb-3">
+                        2. Koliko vam je potrebno da zaspete? <br><br>
+                        <p-spinner [inputStyle] = "{'height':'60px', 'font-size':'40px'}" class="tab" size="30" [min]="1" [max]="300" name="TimeNeededToFallAsleep" placeholder="Broj minuta"
+                          [(ngModel)]="HistoryOfDiseases.TimeNeededToFallAsleep" (onChange)="change(HistoryOfDiseases.TimeNeededToFallAsleep,3)"></p-spinner>
+                         <br><br>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="3. Pitanje" id="3">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP3" class="pb-3">
+                        3. Imate li vozačku dozvolu?<br><br>DA
+                        <p-radioButton class="radio" name="HaveDriverLicence" value='1'
+                          [(ngModel)]="HistoryOfDiseases.HaveDriverLicence"
+                          (click)="check(1 , 'selectedValueDriverLicenceAnswer'); changeRadio(HistoryOfDiseases.HaveDriverLicence,HistoryOfDiseases.selectedValueDriversLicenceCategory,HistoryOfDiseases.KmPerYear,4)">
+                        </p-radioButton> <br><br>NE
+                        <p-radioButton class="radio" name="HaveDriverLicence" value='0'
+                          [(ngModel)]="HistoryOfDiseases.HaveDriverLicence"
+                          (click)="check(0 , 'selectedValueDriverLicenceAnswer'); changeRadio(HistoryOfDiseases.HaveDriverLicence,HistoryOfDiseases.selectedValueDriversLicenceCategory,HistoryOfDiseases.KmPerYear,4)">
+                        </p-radioButton><br><br>
+                        <div id="selectedValueDriverLicenceAnswer" hidden>
+                          3.a. Kategorija vozačke dozvole?<br><br>
+                          A/B
+                          <p-radioButton name="selectedValueDriversLicenceCategory" value="A/B"
+                            [(ngModel)]="HistoryOfDiseases.selectedValueDriversLicenceCategory" (click)="changeRadio(HistoryOfDiseases.HaveDriverLicence,HistoryOfDiseases.selectedValueDriversLicenceCategory,HistoryOfDiseases.KmPerYear,4)">
+                          </p-radioButton> <br><br>C/D
+                          <p-radioButton name="selectedValueDriversLicenceCategory" value="C/D"
+                            [(ngModel)]="HistoryOfDiseases.selectedValueDriversLicenceCategory" (click)="changeRadio(HistoryOfDiseases.HaveDriverLicence,HistoryOfDiseases.selectedValueDriversLicenceCategory,HistoryOfDiseases.KmPerYear,4)">
+                          </p-radioButton> <br><br>
+                          3.b. Koliko kilometara godišnje prijeđete?<br><br>
+                          <p-spinner [inputStyle] = "{'height':'60px', 'font-size':'40px'}" class="tab" size="30" [min]="0"   name="KmPerYear" placeholder="Broj kilometara"
+                            [(ngModel)]="HistoryOfDiseases.KmPerYear" (onChange)="changeRadio(HistoryOfDiseases.HaveDriverLicence,HistoryOfDiseases.selectedValueDriversLicenceCategory,HistoryOfDiseases.KmPerYear,4)"> </p-spinner>
+                          <br><br>
+                        </div>
+
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+
+                <p-tabPanel header="4. Pitanje" id="4">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP4" class="pb-3">
+                        4. Pušite li?<br><br>
+                        DA
+                        <p-radioButton name="Smoker" value='1' [(ngModel)]="HistoryOfDiseases.selectedValueSmoker">
+                        </p-radioButton>
+                        <br><br>
+                        NE
+                        <p-radioButton name="Smoker" value='0' [(ngModel)]="HistoryOfDiseases.selectedValueSmoker">
+                        </p-radioButton>
+                        <br><br>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="5. Pitanje" id="5">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP5" class="pb-3">
+                        5. Koliko alkohola popijete tjedno?<br><br>
+                        <input type="text" name="QuantityOfAlcoholPerWeek" placeholder="Broj mililitara"
+                          [(ngModel)]="HistoryOfDiseases.QuantityOfAlcoholPerWeek">
+                        ml<br><br>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="6. Pitanje" id="6">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP6" class="pb-3">
+                        6. Spavate li preko dana?<br><br>
+                        DA
+                        <p-radioButton name="SleepDuringDay" value='1' [(ngModel)]="HistoryOfDiseases.selectedValueSleepDuringDay"
+                          (click)="check(1 , 'SleepDuringDayAnswer')">
+                        </p-radioButton>
+                        <br><br>
+                        NE
+                        <p-radioButton name="SleepDuringDay" value='0' [(ngModel)]="HistoryOfDiseases.selectedValueSleepDuringDay"
+                          (click)="check(0 , 'SleepDuringDayAnswer')">
+                        </p-radioButton>
+                        <br><br>
+                        <div id="SleepDuringDayAnswer" hidden>
+                          6.a. Ako DA, kada? <br><br>
+                          Ujutro
+                          <p-checkbox name="WhenDoYouSleepDuringDay" value="Ujutro" [(ngModel)]="HistoryOfDiseases.selectedValuesWhen">
+                          </p-checkbox>
+                          Prijepodne
+                          <p-checkbox name="WhenDoYouSleepDuringDay" value="Prijepodne"
+                            [(ngModel)]="HistoryOfDiseases.selectedValuesWhen">
+                          </p-checkbox>
+                          Popodne
+                          <p-checkbox name="WhenDoYouSleepDuringDay" value="Popodne" [(ngModel)]="HistoryOfDiseases.selectedValuesWhen">
+                          </p-checkbox>
+                          Poslijepodne
+                          <p-checkbox name="WhenDoYouSleepDuringDay" value="Poslijepodne"
+                            [(ngModel)]="HistoryOfDiseases.selectedValuesWhen">
+                          </p-checkbox>
+                          Predvečer
+                          <p-checkbox name="WhenDoYouSleepDuringDay" value="Predvečer" [(ngModel)]="HistoryOfDiseases.selectedValuesWhen">
+                          </p-checkbox>
+                          <br><br>
+
+                          6.b. Koliko dugo?<br><br>
+                          <input type="text" name="HowLongDoYouSleepDuringDay" placeholder="Broj minuta" [(ngModel)]="HistoryOfDiseases.HowLongDoYouSleepDuringDay"> min<br><br>
+
+                          6.c. Koliko puta tjedno spavate?<br><br>
+                          <input type="text" name="NumberOfNapsPerWeek" placeholder="Broj puta" [(ngModel)]="HistoryOfDiseases.NumberOfNapsPerWeek">
+                          <br><br>
+
+                          6.d. Osjećate li se odmorno nakon toga?<br><br>
+                          DA
+                          <p-radioButton name="Rested" value="DA" [(ngModel)]="HistoryOfDiseases.selectedValueRested"></p-radioButton>
+                          <br><br>
+                          NE
+                          <p-radioButton name="Rested" value="NE" [(ngModel)]="HistoryOfDiseases.selectedValueRested"></p-radioButton>
+                          <br><br>
+                        </div>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="7. Pitanje" id="7">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP7" class="pb-3">
+                        7. U koje doba dana se najbolje osjećate?<br><br>
+                        Ujutro
+                        <p-radioButton name="TimeOfDay" value="ujutro" [(ngModel)]="HistoryOfDiseases.selectedValueTimeOfDay">
+                        </p-radioButton> <br><br>
+                        U podne
+                        <p-radioButton name="TimeOfDay" value="u podne" [(ngModel)]="HistoryOfDiseases.selectedValueTimeOfDay">
+                        </p-radioButton><br><br>
+                        Poslije podne
+                        <p-radioButton name="TimeOfDay" value="poslije podne" [(ngModel)]="HistoryOfDiseases.selectedValueTimeOfDay">
+                        </p-radioButton>
+                        <br><br>
+                        Predvečer
+                        <p-radioButton name="TimeOfDay" value="predvecer" [(ngModel)]="HistoryOfDiseases.selectedValueTimeOfDay">
+                        </p-radioButton>
+                        <br><br>
+                        Navečer
+                        <p-radioButton name="TimeOfDay" value="navecer" [(ngModel)]="HistoryOfDiseases.selectedValueTimeOfDay">
+                        </p-radioButton><br><br>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="8. Pitanje" id="8">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP8" class="pb-3">
+                        8. Budite li se preko noći?<br><br>
+                        DA
+                        <p-radioButton name="WakeUpDuringTheNight" value='1'
+                          [(ngModel)]="HistoryOfDiseases.selectedValueWakeUpDuringTheNight"
+                          (click)="check(1 , 'WakeUpDuringTheNightAnswer')">
+                        </p-radioButton> <br><br>
+                        NE
+                        <p-radioButton name="WakeUpDuringTheNight" value='0'
+                          [(ngModel)]="HistoryOfDiseases.selectedValueWakeUpDuringTheNight"
+                          (click)="check(0 , 'WakeUpDuringTheNightAnswer')">
+                        </p-radioButton><br><br>
+                        <div id="WakeUpDuringTheNightAnswer" hidden>
+                          8.a. Ako DA, koliko puta? <br><br>
+                          <input type="text" name="NumberOfTimes" placeholder="Broj puta" [(ngModel)]="HistoryOfDiseases.NumberOfTimes"><br><br>
+                          8.b. Kad se probudite tijekom noći, je li vam teško ponovo
+                          zaspati?<br><br>
+                          DA
+                          <p-radioButton name="selectedValueHardToFallAsleepAgain" value='1'
+                            [(ngModel)]="HistoryOfDiseases.selectedValueHardToFallAsleepAgain">
+                          </p-radioButton> <br><br>
+                          NE
+                          <p-radioButton name="selectedValueHardToFallAsleepAgain" value='0'
+                            [(ngModel)]="HistoryOfDiseases.selectedValueHardToFallAsleepAgain">
+                          </p-radioButton><br><br>
+                          8.c. Ako ne možete zaspati, dižete li se iz kreveta?<br><br>
+                          DA
+                          <p-radioButton name="selectedValueGetOutOfBed" value='1' [(ngModel)]="HistoryOfDiseases.selectedValueGetOutOfBed">
+                          </p-radioButton>
+                          <br><br>
+                          NE
+                          <p-radioButton name="selectedValueGetOutOfBed" value='0' [(ngModel)]="HistoryOfDiseases.selectedValueGetOutOfBed">
+                          </p-radioButton>
+                          <br><br>
+                          8.d. Gledate li TV kako bi lakše zaspali?<br><br>
+                          DA
+                          <p-radioButton name="selectedValueWatchTV" value='1' [(ngModel)]="HistoryOfDiseases.selectedValueWatchTV"></p-radioButton>
+                          <br><br>
+                          NE
+                          <p-radioButton name="selectedValueWatchTV" value='0' [(ngModel)]="HistoryOfDiseases.selectedValueWatchTV"></p-radioButton>
+                          <br><br>
+                        </div>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="9. Pitanje" id="9">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP9" class="pb-3">
+                        9. Budite li se s osjećajem boli ili nelagode?<br><br>
+                        DA
+                        <p-radioButton name="selectedValueWakeUpWithPain" value='1' [(ngModel)]="HistoryOfDiseases.selectedValueWakeUpWithPain"
+                          (click)="check(1 , 'WakeUpWithPainAnswer')">
+                        </p-radioButton>
+                        <br><br>
+                        NE
+                        <p-radioButton name="selectedValueWakeUpWithPain" value='0' [(ngModel)]="HistoryOfDiseases.selectedValueWakeUpWithPain"
+                          (click)="check(0 , 'WakeUpWithPainAnswer')">
+                        </p-radioButton>
+                        <br><br>
+                        <div id="WakeUpWithPainAnswer" hidden>
+                          9.a. Ako DA, Koliko često?<br><br>
+                          <input type="text" name="HowOften" placeholder="Broj puta u mjesec dana"  [(ngModel)]="HistoryOfDiseases.HowOften">
+                          <br><br>
+                        </div>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="10. Pitanje" id="10">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP10" class="pb-3">
+                        10. Ima li netko iz Vaše obitelji probleme sa spavanjem?<br><br>
+                        DA
+                        <p-radioButton name="selectedValueFamilyIssueWithSleep" value='1'
+                          [(ngModel)]="HistoryOfDiseases.selectedValueFamilyIssueWithSleep"
+                          (click)="check(1 , 'FamilyIssueWithSleepAnswer')">
+                        </p-radioButton> <br><br>
+                        NE
+                        <p-radioButton name="selectedValueFamilyIssueWithSleep" value='0'
+                          [(ngModel)]="HistoryOfDiseases.selectedValueFamilyIssueWithSleep"
+                          (click)="check(0 , 'FamilyIssueWithSleepAnswer')">
+                        </p-radioButton><br><br>
+                        <div id="FamilyIssueWithSleepAnswer" hidden>
+                          10.a. Ako DA, u kojem ste srodstvu?<br><br>
+                          <input type="text" name="Kinship" placeholder="npr. Rođaci,Braća..."  [(ngModel)]="HistoryOfDiseases.Kinship"><br><br>
+                          10.b. Koja je dijagnoza?<br><br>
+                          <input type="text" name="Diagnosis" placeholder="Nesanica,narkolepsija..."  [(ngModel)]="HistoryOfDiseases.Diagnosis"><br><br>
+                        </div>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="11. Pitanje" id="11">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP11" class="pb-3">
+                        11. Je li netko iz vaše obitelji umro u snu?<br><br>
+                        DA
+                        <p-radioButton name="selectedValueDiedInSleep" value='1' [(ngModel)]="HistoryOfDiseases.selectedValueDiedInSleep">
+                        </p-radioButton>
+                        <br><br>
+                        NE
+                        <p-radioButton name="selectedValueDiedInSleep" value='0' [(ngModel)]="HistoryOfDiseases.selectedValueDiedInSleep">
+                        </p-radioButton>
+                        <br><br>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+
+                <p-tabPanel header="12. Pitanje" id="12">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP12" class="pb-3">
+                        12. Liječite li se od neke bolesti?<br><br>
+                        DA
+                        <p-radioButton name="selectedValueTreatment" value='1' [(ngModel)]="HistoryOfDiseases.selectedValueTreatment"
+                          (click)="check(1 , 'TreatmentAnswer')">
+                        </p-radioButton> <br><br>
+                        NE
+                        <p-radioButton name="selectedValueTreatment" value='0' [(ngModel)]="HistoryOfDiseases.selectedValueTreatment"
+                          (click)="check(0 , 'TreatmentAnswer')">
+                        </p-radioButton> <br><br>
+                        <div id="TreatmentAnswer" hidden>
+                          12.a. Ako DA, od koje (dijabetes melitus, hipertenzija, srčane tegobe, depresija,
+                          štitanjača i sl.)?<br><br>
+                          1. <input type="text" name="NameOfDisease" placeholder="Ime bolesti" [(ngModel)]="HistoryOfDiseases.NameOfDisease1"><br><br>
+                          2. <input type="text" name="NameOfDisease" placeholder="Ime bolesti" [(ngModel)]="HistoryOfDiseases.NameOfDisease2"><br><br>
+                          3. <input type="text" name="NameOfDisease" placeholder="Ime bolesti" [(ngModel)]="HistoryOfDiseases.NameOfDisease3"><br><br>
+                          4. <input type="text" name="NameOfDisease" placeholder="Ime bolesti" [(ngModel)]="HistoryOfDiseases.NameOfDisease4"><br><br>
+                          5. <input type="text" name="NameOfDisease" placeholder="Ime bolesti" [(ngModel)]="HistoryOfDiseases.NameOfDisease5"><br><br>
+                        </div>
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+                <p-tabPanel header="13. Pitanje" id="13">
+                  <p-scrollPanel [style]="{width: '100%', height: '455px'}">
+
+                    <div class="font">
+                      <div id="EP13" class="pb-3" >
+                        13. Koje lijekove uzimate (Navedite i dozu)?<br><br>
+                        1. <input type="text" name="Meds" placeholder="Naziv lijeka" [(ngModel)]="HistoryOfDiseases.Meds"> <input type="text" name="Dose"
+                          placeholder="Doza u mg" [(ngModel)]="HistoryOfDiseases.Dose"> <br><br>
+                        2. <input type="text" name="Meds" placeholder="Naziv lijeka"> <input type="text" name="Dose"
+                          placeholder="Doza u mg"> <br><br>
+                        3. <input type="text" name="Meds" placeholder="Naziv lijeka"> <input type="text" name="Dose"
+                          placeholder="Doza u mg"> <br><br>
+                        4. <input type="text" name="Meds" placeholder="Naziv lijeka"> <input type="text" name="Dose"
+                          placeholder="Doza u mg"> <br><br>
+                        5. <input type="text" name="Meds" placeholder="Naziv lijeka"> <input type="text" name="Dose"
+                          placeholder="Doza u mg"> <br><br>
+                        6. <input type="text" name="Meds" placeholder="Naziv lijeka"> <input type="text" name="Dose"
+                          placeholder="Doza u mg"> <br><br>
+                        7. <input type="text" name="Meds" placeholder="Naziv lijeka"> <input type="text" name="Dose"
+                          placeholder="Doza u mg"> <br><br>
+                        8. <input type="text" name="Meds" placeholder="Naziv lijeka"> <input type="text" name="Dose"
+                          placeholder="Doza u mg"> <br><br>
+                        <br><br>
+
+                      </div>
+                    </div>
+                  </p-scrollPanel>
+                </p-tabPanel>
+
+              </p-tabView>
+
+              <div class="ui-g-offset-1">
+                <a routerLink="/"><button pButton type="submit" style="width: 8rem; height: 3rem; margin-top: 80px;"
+                    icon="pi pi-check" label="Završi"
+                    class="ui-button-raised ui-button-rounded ui-button-success"></button></a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
