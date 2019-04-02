@@ -32,7 +32,8 @@ import { NakonComponent } from './nakon_spavanja/nakon.component';
 import { PrijeComponent} from './prije_spavanja/prije.component';
 import { FormularUjutroComponent } from './formular-ujutro/formular-ujutro.component';
 import { FormularNavecerComponent } from './formular-navecer/formular-navecer.component';
-
+import { TabletPittsburghSleepQualityIndexComponent} from './tablet-pittsburgh-sleep-quality-index/tablet-pittsburgh-sleep-quality-index.component';
+import { InputMaskModule} from 'primeng/inputmask';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { FormularNavecerComponent } from './formular-navecer/formular-navecer.co
     NakonComponent,
     PrijeComponent,
     FormularUjutroComponent,
-    FormularNavecerComponent
+    FormularNavecerComponent,
+    TabletPittsburghSleepQualityIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ import { FormularNavecerComponent } from './formular-navecer/formular-navecer.co
     MenubarModule,
     ScrollPanelModule,
     SidebarModule,
-    AccordionModule
+    AccordionModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

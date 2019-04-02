@@ -13,6 +13,7 @@ import { NakonComponent } from './nakon_spavanja/nakon.component';
 import { PrijeComponent } from './prije_spavanja/prije.component';
 import { FormularUjutroComponent } from './formular-ujutro/formular-ujutro.component';
 import { FormularNavecerComponent } from './formular-navecer/formular-navecer.component';
+import { TabletPittsburghSleepQualityIndexComponent } from './tablet-pittsburgh-sleep-quality-index/tablet-pittsburgh-sleep-quality-index.component';
 
 
 
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'nakon-spavanja',component: NakonComponent},
   { path: 'prije-spavanja',component: PrijeComponent},
   { path: 'ujutro', component: FormularUjutroComponent},
-  { path: 'navecer', component: FormularNavecerComponent}
+  { path: 'navecer', component: FormularNavecerComponent},
+  { path: 'tab-pittsburgh-formular', component: TabletPittsburghSleepQualityIndexComponent}
 ];
 
 @NgModule({
