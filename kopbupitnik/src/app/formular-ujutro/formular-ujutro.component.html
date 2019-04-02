@@ -1,0 +1,131 @@
+<!--<div class="ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <div class="box">
+        <p-card>
+          <p-header>
+            <div class="heading">
+                Popunite ujutro
+              </div>
+          </p-header>
+        </p-card>
+        <p-tabView orientation="left" (onChange)="handleChange($event)"> 
+            <p-tabPanel  header="Vrijeme odlaska u krevet" >
+                
+                  <div  class="pb-3"> 
+                    Kada ste otišli u krevet?    <input name="P1" [(ngModel)]="P1" type="time"  pInputText />
+                  </div>
+                
+            </p-tabPanel>
+            <p-tabPanel header="Vrijeme ustajanja" >
+                <div  class="pb-3">  
+                  Kada ste se probudili?<input name="P2" [(ngModel)]="P2" type="time"  pInputText />
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="Vrijeme potrebno za usnivanje(u minutama)"  >
+                <div  class="pb-3">  
+                  Koliko minuta vam je trebalo da zaspete?<input name="P3" [(ngModel)]="P3" type="number"  pInputText />
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="Broj buđenja i ukupno trajanje budnosti"  >
+                <div  class="pb-3">  
+                  Broj buđenja: <input name="P4" [(ngModel)]="P4" type="number"  pInputText /> Ukupno trajanje budnosti(u minutama): <input type="number"  pInputText /> 
+                </div>  
+            </p-tabPanel>
+            <p-tabPanel header="Vrijeme pravog spavanja"  >
+                <div  class="pb-3">  
+                  Koliko ste zapravo spavali?<input name="P5" [(ngModel)]="P5" type="time"  pInputText />
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<div class="p-grid p-align-center vertAlign">
+  
+  <form class="form-formular maxHeight">
+
+    <p-scrollPanel [style]="{width: '100%', height: '100%;'}">
+      <p-tabView orientation="left" (onChange)="handleChange($event)">
+        <p-tabPanel header="1. Pitanje" id="1">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="prvo" class="pb-3">
+                  <p style="font-weight:bold;">Kada ste otisli u krevet?</p>
+                  
+                  <input type="time" pInputText [(ngModel)]="prvo" name="prvo" class="tab" required="required">
+                  </div>                            
+                </div>
+            
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="2. Pitanje" id="2">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="drugo" class="pb-3">
+                  <p style="font-weight: bold;">Kada ste se probudili?</p>
+                  <input name="P2" [(ngModel)]="drugo" type="time"  pInputText /> 
+                  <span class="ui-inputgroup-addon">sati</span>                         
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="3. Pitanje" id="3">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="trece" class="pb-3">
+                 <p style="font-weight: bold;">Koliko minuta vam je trebalo da zaspete?</p>
+
+                 <input name="P3" [(ngModel)]="trece" type="number"  pInputText />
+                  
+                  </div>                           
+                </div>
+            
+          </p-scrollPanel>
+        </p-tabPanel>
+
+        <p-tabPanel header="4. Pitanje" id="4">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="cetvrto" class="pb-3">
+                  <p style="font-weight: bold;">Broj buđenja i ukupno trajanje budnosti</p>
+                  <input name="P4" [(ngModel)]="cetvrto" type="number" (click)="checkCetvrto()" pInputText />
+                  <div id="cetvrtoCheck" hidden>
+                  <br><br><span class="ui-inputgroup-addon"></span> 
+
+                  <input  type="number"  pInputText /> minuta
+                  
+                  </div>
+                </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="5. Pitanje" id="5">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div class="font">
+              <div id="peto" class="pb-3">
+                  <span class="ui-inputgroup-addon" style="font-weight: bold;">Vrijeme pravog spavanja</span> 
+               
+                  <input name="P5" [(ngModel)]="peto" type="time"  pInputText />
+
+              </div>
+            </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+      
+
+      </p-tabView>
+    </p-scrollPanel>
+    
+    <a routerLink="/"><button pButton type="submit" icon="pi pi-check" label="Završi"
+        class="ui-button-raised ui-button-rounded ui-button-success pt-1 formSubmitButton"></button></a>
+  </form>
+  
+</div>
+
+
+
