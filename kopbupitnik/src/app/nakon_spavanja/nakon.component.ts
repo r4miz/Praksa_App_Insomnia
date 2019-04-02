@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, AfterViewInit} from "@angular/core";
 
  @Component ({
      templateUrl:'./nakon.component.html',
@@ -6,7 +6,8 @@ import {Component, OnInit} from "@angular/core";
 
  })
 
- export class NakonComponent implements OnInit{
+ export class NakonComponent implements OnInit,AfterViewInit{
+    divider: number = 11;
     prvo: string = null;
     drugo: number=null;
     trece: string= null;
@@ -32,6 +33,43 @@ import {Component, OnInit} from "@angular/core";
 
   ngOnInit() {
   }
+
+  // paginator begin, options: true -> hide page, false -> unhide page
+  ngAfterViewInit(): void {
+    var items = document.getElementsByTagName("li");
+    console.log(items.length);
+    this.handleOverflowTabsAfterDivider(items, true);
+  }
+
+  // after 11th question hide or unhide
+  handleOverflowTabsAfterDivider(items, decision: boolean) {
+    if (items.length > this.divider) {
+      for (let index = this.divider; index < items.length; index++) {
+        items[index].hidden = decision;
+      }
+    }
+  }
+
+  // before 11th question hide or unhide
+  handleOverflowTabsBeforeDivider(items, decision: boolean) {
+    if (items.length > this.divider) {
+      for (let index = 0; index < this.divider; index++) {
+        items[index].hidden = decision;
+      }
+    }
+  }
+
+  next() {
+    var items = document.getElementsByTagName("li");
+    this.handleOverflowTabsBeforeDivider(items, true);
+    this.handleOverflowTabsAfterDivider(items, false);
+  }
+  prev() {
+    var items = document.getElementsByTagName("li");
+    this.handleOverflowTabsAfterDivider(items, true);
+    this.handleOverflowTabsBeforeDivider(items, false);
+  }
+ // paginator end
 
   handleChange(e) {
     var items = document.getElementsByTagName("li");

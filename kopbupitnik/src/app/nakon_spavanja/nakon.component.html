@@ -1,5 +1,5 @@
-<div class="p-grid p-align-center vertAlign">
-  <div class="p-col heading pt-3 pb-3">
+<div class="p-col">
+  <div class="heading pt-3 pb-3">
     Upitnik bolesniku nakon spavanja
   </div>
 
@@ -315,9 +315,12 @@
 
       </p-tabView>
     </p-scrollPanel>
-    
-    <a routerLink="/"><button pButton type="submit" style="width: 6rem;" icon="pi pi-check" label="Završi"
-        class="ui-button-raised ui-button-rounded ui-button-success pt-1"></button></a>
+    <button pButton type="submit" icon="pi pi-caret-left" label="Prijethodna" (click)="prev()"
+    class="ui-button-raised ui-button-rounded ui-button-info pt-1 mr-2"></button>
+  <button pButton type="submit" icon="pi pi-caret-right" label="Sljedeća" (click)="next()"
+    class="ui-button-raised ui-button-rounded ui-button-info pt-1 mr-2"></button>
+  <a routerLink="/"><button pButton type="submit" icon="pi pi-check" label="Završi"
+      class="ui-button-raised ui-button-rounded ui-button-success pt-1 formSubmitButton"></button></a>
   </form>
   
 </div>
