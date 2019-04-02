@@ -12,6 +12,11 @@ export class TabletPittsburghSleepQualityIndexComponent implements OnInit {
     Upute:</strong><br>Sljedeća pitanja se odnose na Vaše uobičajene navike vezane uz spavanje tijekom
     posljednjih mjesec dana. Molimo odgovorite na <u><i>sva</i></u> pitanja.
   </p>`;
+  explanation2= `<p><strong>
+  Upute:</strong><br>Sljedeća pitanja se odnose na Vaše uobičajene navike vezane uz spavanje tijekom
+  posljednjih mjesec dana.Za svako sljedeće pitanje,
+  odaberite točan odgovor. Molimo odgovorite na <u><i>sva</i></u> pitanja.
+</p>`;
   constructor() { }
 
   ngOnInit() {

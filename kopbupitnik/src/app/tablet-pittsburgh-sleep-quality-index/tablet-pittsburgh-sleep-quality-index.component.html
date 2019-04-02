@@ -50,23 +50,18 @@
             </div>
           </p-scrollPanel>
         </p-tabPanel>
-        <p-tabPanel header="3. Pitanje" id="3">
+        <p-tabPanel header="4. Pitanje" id="3">
           <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            <div style="font-size: 22px;" [innerHTML]="explanation" class="pb-1">
             </div>
             <div class="font">
-              <div id="N3" class="pb-3">
-                <p class="question pb-1">Otežano disanje kroz nos</p>
-                <p-radioButton name="N3" value="0" label="0" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Nije problem<br>
-                <p-radioButton name="N3" value="1" label="1" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Vrlo blagi problem<br>
-                <p-radioButton name="N3" value="2" label="2" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Umjereni problem<br>
-                <p-radioButton name="N3" value="3" label="3" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Prilično težak problem<br>
-                <p-radioButton name="N3" value="4" label="4" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Težak problem
+              <div class="pb-3">
+                <span class="pb-3">&diams; Tijekom posljednjih mjesec dana, koliko sati ste u krevetu proveli spavajući?
+                  (Ovaj broj sati se može razlikovati od broja sati provedenih u krevetu:)</span><br>
+                <div class="tab">
+                  <p-inputMask [style]="{'font-size':'32px'}" name="P1" [(ngModel)]="P4" mask="99" slotChar="_" autocomplete="off"
+                    placeholder="Sati sna po noći"></p-inputMask>
+                </div>
               </div>
             </div>
           </p-scrollPanel>
