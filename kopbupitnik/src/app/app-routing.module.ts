@@ -11,6 +11,9 @@ import { TabletSimptomiComponent } from './tablet-simptomi/tablet-simptomi.compo
 import { BerlinskiUpitnikComponent } from './berlinski-upitnik/berlinski-upitnik.component';
 import { NakonComponent } from './nakon_spavanja/nakon.component';
 import { PrijeComponent } from './prije_spavanja/prije.component';
+import { TabletPittsburghSleepQualityIndexComponent } from './tablet-pittsburgh-sleep-quality-index/tablet-pittsburgh-sleep-quality-index.component';
+
+
 
 
 
@@ -25,7 +28,8 @@ const routes: Routes = [
   { path: 'tab-simptomi-formular', component: TabletSimptomiComponent},
   { path: 'berlinski-upitnik',component: BerlinskiUpitnikComponent},
   { path: 'nakon-spavanja',component: NakonComponent},
-  { path: 'prije-spavanja',component: PrijeComponent}
+  { path: 'prije-spavanja', component: PrijeComponent},
+  { path: 'tab-pittsburgh-formular', component: TabletPittsburghSleepQualityIndexComponent}
 ];
 
 @NgModule({

@@ -30,7 +30,8 @@ import { TabletSimptomiComponent } from './tablet-simptomi/tablet-simptomi.compo
 import { BerlinskiUpitnikComponent } from './berlinski-upitnik/berlinski-upitnik.component';
 import { NakonComponent } from './nakon_spavanja/nakon.component';
 import { PrijeComponent} from './prije_spavanja/prije.component';
-
+import { TabletPittsburghSleepQualityIndexComponent } from './tablet-pittsburgh-sleep-quality-index/tablet-pittsburgh-sleep-quality-index.component';
+import {InputMaskModule} from 'primeng/inputmask';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { PrijeComponent} from './prije_spavanja/prije.component';
     TabletSimptomiComponent,
     BerlinskiUpitnikComponent,
     NakonComponent,
-    PrijeComponent
+    PrijeComponent,
+    TabletPittsburghSleepQualityIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { PrijeComponent} from './prije_spavanja/prije.component';
     MenubarModule,
     ScrollPanelModule,
     SidebarModule,
-    AccordionModule
+    AccordionModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
