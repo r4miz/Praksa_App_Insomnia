@@ -7,6 +7,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class TabletSimptomiComponent implements OnInit, AfterViewInit {
   
+  index: number = 0;
   divider: number = 11;
   SI1: number = null;
   SI2: number = null;
@@ -36,7 +37,6 @@ export class TabletSimptomiComponent implements OnInit, AfterViewInit {
   
   checkTextAreaContent() {
     var txt = document.getElementById('float-input');
-    console.log(txt);
     if (this.SI19 != 0) {
       txt.removeAttribute('readonly');
     }
@@ -100,11 +100,13 @@ export class TabletSimptomiComponent implements OnInit, AfterViewInit {
     var items = document.getElementsByTagName("li");
     this.handleOverflowTabsBeforeDivider(items, true);
     this.handleOverflowTabsAfterDivider(items, false);
+    this.index = 11;
   }
   prev() {
     var items = document.getElementsByTagName("li");
     this.handleOverflowTabsAfterDivider(items, true);
     this.handleOverflowTabsBeforeDivider(items, false);
+    this.index = 0;
   }
   // paginator end
 
