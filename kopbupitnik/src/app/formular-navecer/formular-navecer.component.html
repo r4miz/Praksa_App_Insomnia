@@ -78,9 +78,9 @@
                   <div id="prvoCheck" hidden>
                   <br><br><span class="ui-inputgroup-addon"></span> 
                    Kada?
-                  <input  type="time"  pInputText /> 
+                  <input (click)="handleChange" [(ngModel)]="drijem1" name="drijem1" type="time"  pInputText /> 
                     Koliko?
-                  <input  type="time"  pInputText /> minuta
+                  <input (click)="handleChange" [(ngModel)]="drijem2" name="drijem2" type="time"  pInputText /> minuta
                   
                   </div>
                 </div>
@@ -93,15 +93,15 @@
             <div class="font">
               <div id="drugo" class="pb-3">
                 <p style="font-weight: bold;">Jeste li pili alkohol danas?</p>
-                <p-radioButton (click)="checkDrugo()" name="cetvrto" label="NE" value="drugoNe" [(ngModel)]="drugo" class="mr-3" required></p-radioButton>
-                <p-radioButton (click)="checkDrugo()" name="cetvrto" label="DA" value="drugoDa" [(ngModel)]="drugo" class="mr-3" required></p-radioButton>
+                <p-radioButton (click)="checkDrugo()" (click)="handleChange" name="cetvrto" label="NE" value="drugoNe" [(ngModel)]="drugo" class="mr-3" required></p-radioButton>
+                <p-radioButton (click)="checkDrugo()" (click)="handleChange" name="cetvrto" label="DA" value="drugoDa" [(ngModel)]="drugo" class="mr-3" required></p-radioButton>
                
                 <div id="drugoCheck" hidden>
                 <br><br><span class="ui-inputgroup-addon"></span> 
                  Kada?
-                <input  type="time"  pInputText /> 
+                <input [(ngModel)]="vrijemePica" name="vrijemePica" type="time"  pInputText /> 
                   Koliko?
-                <input  type="number"  pInputText /> pića
+                <input  [(ngModel)]="kolicinaPica" name="kolicinaPica" type="number"  pInputText /> pića
                 
                 </div>
               </div>
