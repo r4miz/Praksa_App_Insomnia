@@ -61,43 +61,43 @@ export class HistoryOfDiseasesRelatedToSleepComponent implements OnInit {
     // Prvo pitanje
 
     if (this.HistoryOfDiseases.HoursOfSleepPerNight !== null) {
-      items[2].setAttribute('style', 'background-color: green;');
+      items[0].setAttribute('style', 'background-color: green;');
     } else {
-      items[2].removeAttribute('style');
+      items[0].removeAttribute('style');
     }
     // Drugo pitanje
 
     if (this.HistoryOfDiseases.TimeNeededToFallAsleep !== null) {
-      items[3].setAttribute('style', 'background-color: green;');
+      items[1].setAttribute('style', 'background-color: green;');
     } else {
-      items[3].removeAttribute('style');
+      items[1].removeAttribute('style');
     }
 
     // Trece pitanje
 
     if (this.HistoryOfDiseases.HaveDriverLicence != null) {
       if (this.HistoryOfDiseases.HaveDriverLicence == 0) {
-        items[4].setAttribute('style', 'background-color: green;');
+        items[2].setAttribute('style', 'background-color: green;');
       } else {
         if (this.HistoryOfDiseases.selectedValueDriversLicenceCategory != null && this.HistoryOfDiseases.KmPerYear !== null) {
-          items[4].setAttribute('style', 'background-color: green;');
+          items[2].setAttribute('style', 'background-color: green;');
 
         } else {
-          items[4].setAttribute('style', 'background-color: darkorange;');
+          items[2].setAttribute('style', 'background-color: darkorange;');
 
         }
 
       }
 
     } else {
-      items[4].removeAttribute('style');
+      items[2].removeAttribute('style');
     }
 
     // Cetvrto pitanje
     if (this.HistoryOfDiseases.selectedValueSmoker !== null) {
-      items[5].setAttribute('style', 'background-color: green;');
+      items[3].setAttribute('style', 'background-color: green;');
     } else {
-      items[5].removeAttribute('style');
+      items[3].removeAttribute('style');
     }
 
     /*// Peto pitanje
