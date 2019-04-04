@@ -80,7 +80,7 @@
                    Kada?
                   <input (click)="handleChange" [(ngModel)]="drijem1" name="drijem1" type="time"  pInputText /> 
                     Koliko?
-                  <input (click)="handleChange" [(ngModel)]="drijem2" name="drijem2" type="time"  pInputText /> minuta
+                  <input (click)="handleChange" [(ngModel)]="drijem2" name="drijem2" type="number"  pInputText /> minuta
                   
                   </div>
                 </div>
@@ -147,7 +147,7 @@
           <p-scrollPanel [style]="{width: '100%', height: '427px'}">
             <div class="font">
               <div id="peto" class="pb-3">
-                  <span class="ui-inputgroup-addon" style="font-weight: bold;">Koje lijekove ste danas uzeli?</span> 
+                  <span class="ui-inputgroup-addon" style="font-weight: bold;">Koje lijekove ste danas uzeli?</span> <br>
                   <input [(ngModel)]="peto" [ngModelOptions]="{standalone: true}" type="text"  pInputText />
 
               </div>
