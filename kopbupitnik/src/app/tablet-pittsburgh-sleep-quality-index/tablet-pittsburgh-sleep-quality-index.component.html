@@ -50,71 +50,294 @@
             </div>
           </p-scrollPanel>
         </p-tabPanel>
-        <p-tabPanel header="3. Pitanje" id="3">
+        <p-tabPanel header="4. Pitanje" id="3">
           <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+            <div style="font-size: 22px;" [innerHTML]="explanation" class="pb-1">
             </div>
             <div class="font">
-              <div id="N3" class="pb-3">
-                <p class="question pb-1">Otežano disanje kroz nos</p>
-                <p-radioButton name="N3" value="0" label="0" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Nije problem<br>
-                <p-radioButton name="N3" value="1" label="1" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Vrlo blagi problem<br>
-                <p-radioButton name="N3" value="2" label="2" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Umjereni problem<br>
-                <p-radioButton name="N3" value="3" label="3" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Prilično težak problem<br>
-                <p-radioButton name="N3" value="4" label="4" [(ngModel)]="N3" class="mr-3">
-                </p-radioButton>Težak problem
+              <div class="pb-3">
+                <span class="pb-3">&diams; Tijekom posljednjih mjesec dana, koliko sati ste u krevetu proveli spavajući?
+                  (Ovaj broj sati se može razlikovati od broja sati provedenih u krevetu:)</span><br>
+                <div class="tab">
+                  <p-inputMask [style]="{'font-size':'32px'}" name="P1" [(ngModel)]="P4" mask="99" slotChar="_" autocomplete="off"
+                    placeholder="Sati sna po noći"></p-inputMask>
+                </div>
               </div>
             </div>
           </p-scrollPanel>
         </p-tabPanel>
 
-        <p-tabPanel header="4. Pitanje" id="4">
+        <p-tabPanel header="5. Pitanje" id="4">
           <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
+              <div style="font-size: 22px;" [innerHTML]="explanation2" class="pb-1">
+                </div>
+                <div class="font">
+                  <div class="pb-3">
+                    <span class="pb-3">&diams; Tijekom posljednjih mjesec dana, koliko često ...</span><br>
+                    <p>a)Niste mogli zaspati duže od 30 minuta</p>
+                    <p-radioButton name="P5a" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5a">
+                      </p-radioButton><br>
+                      <p-radioButton name="P5a" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5a">
+                      </p-radioButton><br>
+                      <p-radioButton name="P5a" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5a">
+                      </p-radioButton><br>
+                      <p-radioButton name="P5a" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5a">
+                      </p-radioButton><br><br>
+                      <p>b)Ste se budili tijekom noći ili u ranu zoru</p>
+                    <p-radioButton name="P5b" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5b">
+                      </p-radioButton><br>
+                      <p-radioButton name="P5b" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5b">
+                      </p-radioButton><br>
+                      <p-radioButton name="P5b" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5b">
+                      </p-radioButton><br>
+                      <p-radioButton name="P5b" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5b">
+                      </p-radioButton><br><br>
+                      <p>c)Ste morali ustajati iz kreveta radi odlaska u wc</p>
+                      <p-radioButton name="P5c" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5c">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5c" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5c">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5c" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5c">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5c" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5c">
+                        </p-radioButton><br><br>
+                        <p>d)Niste mogli normalno disati tijekom noći</p>
+                      <p-radioButton name="N5d" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="N5d">
+                        </p-radioButton><br>
+                        <p-radioButton name="N5d" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="N5d">
+                        </p-radioButton><br>
+                        <p-radioButton name="N5d" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="N5d">
+                        </p-radioButton><br>
+                        <p-radioButton name="N5d" value="3" label="Tri ili više puta tjedno" [(ngModel)]="N5d">
+                        </p-radioButton><br><br>
+                        <p>e)Ste kašljali ili glasno hrkali tijekom noći</p>
+                      <p-radioButton name="P5e" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5e">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5e" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5e">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5e" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5e">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5e" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5e">
+                        </p-radioButton><br><br>
+                        <p>f)Vam je bilo hladno tijekom noći</p>
+                      <p-radioButton name="P5f" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5f">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5f" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5f">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5f" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5f">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5f" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5f">
+                        </p-radioButton><br><br>
+                        <p>g)Vam je bilo pretoplo tijekom noći</p>
+                      <p-radioButton name="P5g" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5g">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5g" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5g">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5g" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5g">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5g" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5g">
+                        </p-radioButton><br><br>
+                        <p>h)Ste ružno sanjali</p>
+                      <p-radioButton name="P5h" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5h">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5h" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5h">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5h" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5h">
+                        </p-radioButton><br>
+                        <p-radioButton name="P5h" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5h">
+                        </p-radioButton><br><br>
+                        <p>i)Ste imali bolove tijekom noći</p>
+                        <p-radioButton name="P5i" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5i">
+                          </p-radioButton><br>
+                          <p-radioButton name="P5i" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5i">
+                          </p-radioButton><br>
+                          <p-radioButton name="P5i" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5i">
+                          </p-radioButton><br>
+                          <p-radioButton name="P5i" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5i">
+                          </p-radioButton><br><br>
+                          <p>j)Ostali razlozi molimo navedite</p>
+                          <div class="p-col">
+                              <textarea id="float-input" name="P5jTextArea" rows="4" cols="30" [(ngModel)]="P5jTextArea"
+                                pInputTextarea autoResize="autoResize"></textarea>
+                            </div>
+                          <p>Koliko često ste posljednjih mjesec dana loše spavali zbog navedenih tegoba</p>
+                        <p-radioButton name="P5k" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P5k">
+                          </p-radioButton><br>
+                          <p-radioButton name="P5k" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P5k">
+                          </p-radioButton><br>
+                          <p-radioButton name="P5k" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P5k">
+                          </p-radioButton><br>
+                          <p-radioButton name="P5k" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P5k">
+                          </p-radioButton><br><br>
+                  </div>
+                </div>
+          </p-scrollPanel>
+        </p-tabPanel>
+        <p-tabPanel header="6. Pitanje" id="5">
+          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+            <div style="font-size: 22px;" [innerHTML]="explanation2" class="pb-1">
             </div>
             <div class="font">
-              <div id="N4" class="pb-3">
-                <p class="question pb-1">Otežano spavanje</p>
-                <p-radioButton name="N4" value="0" label="0" [(ngModel)]="N4" class="mr-3">
-                </p-radioButton>Nije problem<br>
-                <p-radioButton name="N4" value="1" label="1" [(ngModel)]="N4" class="mr-3">
-                </p-radioButton>Vrlo blagi problem<br>
-                <p-radioButton name="N4" value="2" label="2" [(ngModel)]="N4" class="mr-3">
-                </p-radioButton>Umjereni problem<br>
-                <p-radioButton name="N4" value="3" label="3" [(ngModel)]="N4" class="mr-3">
-                </p-radioButton>Prilično težak problem<br>
-                <p-radioButton name="N4" value="4" label="4" [(ngModel)]="N4" class="mr-3">
-                </p-radioButton>Težak problem
+              <div class="pb-3">
+                  <span class="pb-3">&diams; Tijekom posljednjih mjesec dana, kako bi ste sve skupa ocjenili kvalitetu Vašeg spavanja?</span><br>
+                  <p-radioButton name="P6" value="0" label="Vrlo dobro" [(ngModel)]="P6">
+                    </p-radioButton><br>
+                    <p-radioButton name="P6" value="1" label="dobro" [(ngModel)]="P6">
+                    </p-radioButton><br>
+                    <p-radioButton name="P6" value="2" label="Vrlo loše" [(ngModel)]="P6">
+                    </p-radioButton><br>
+                    <p-radioButton name="P6" value="3" label="loše" [(ngModel)]="P6">
+                    </p-radioButton><br><br>
               </div>
             </div>
           </p-scrollPanel>
         </p-tabPanel>
-        <p-tabPanel header="5. Pitanje" id="5">
-          <p-scrollPanel [style]="{width: '100%', height: '427px'}">
-            <div style="font-size: 22px;" [innerHTML]="number_explanation" class="pb-1">
-            </div>
-            <div class="font">
-              <div id="N5" class="pb-3">
-                <p class="question pb-1">Nemogućnost dobivanja dovoljno zraka kroz nos tijekom vježbanja ili
-                  napora</p>
-                <p-radioButton name="N5" value="0" label="0" [(ngModel)]="N5" class="mr-3">
-                </p-radioButton>Nije problem<br>
-                <p-radioButton name="N5" value="1" label="1" [(ngModel)]="N5" class="mr-3">
-                </p-radioButton>Vrlo blagi problem<br>
-                <p-radioButton name="N5" value="2" label="2" [(ngModel)]="N5" class="mr-3">
-                </p-radioButton>Umjereni problem<br>
-                <p-radioButton name="N5" value="3" label="3" [(ngModel)]="N5" class="mr-3">
-                </p-radioButton>Prilično težak problem<br>
-                <p-radioButton name="N5" value="4" label="4" [(ngModel)]="N5" class="mr-3">
-                </p-radioButton>Težak problem
+        <p-tabPanel header="7. Pitanje" id="6">
+            <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+              <div style="font-size: 22px;" [innerHTML]="explanation2" class="pb-1">
               </div>
-            </div>
-          </p-scrollPanel>
-        </p-tabPanel>
+              <div class="font">
+                <div class="pb-3">
+                    <span class="pb-3">&diams; Tijekom posljednjih mjesec dana,koliko često ste uzimali lijekove za spavanje?</span><br>
+                    <p-radioButton name="P7" value="0" label="Nikad tijekom posljednjeg mjeseca" [(ngModel)]="P7">
+                      </p-radioButton><br>
+                      <p-radioButton name="P7" value="1" label="Rjeđe nego jednom tjedno" [(ngModel)]="P7">
+                      </p-radioButton><br>
+                      <p-radioButton name="P7" value="2" label="Jedan ili dva puta tjedno" [(ngModel)]="P7">
+                      </p-radioButton><br>
+                      <p-radioButton name="P7" value="3" label="Tri ili više puta tjedno" [(ngModel)]="P7">
+                      </p-radioButton><br><br>
+                </div>
+              </div>
+            </p-scrollPanel>
+          </p-tabPanel>
+          <p-tabPanel header="8. Pitanje" id="7">
+              <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                <div style="font-size: 22px;" [innerHTML]="explanation2" class="pb-1">
+                </div>
+                <div class="font">
+                  <div id="N8" class="pb-3">
+                      <span class="pb-3">&diams;Koliko često ste teško ostajali budni dok ste vozili, jeli ili 
+                      bili na sastanku tijekom proteklih mjesec dana</span><br>
+                  
+                    <p-radioButton name="N8" value="0" label="Nikad" [(ngModel)]="N8" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N8" value="1" label="Rjeđe od jednom tjedno" [(ngModel)]="N8" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N8" value="2" label="Jednom ili dvaput tjedno" [(ngModel)]="N8" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N8" value="3" label="Tri puta ili više tjedno" [(ngModel)]="N8" class="mr-3">
+                    </p-radioButton><br>
+                    
+                  </div>
+                </div>
+              </p-scrollPanel>
+            </p-tabPanel>
+            <p-tabPanel header="9. Pitanje" id="8">
+              <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                <div style="font-size: 22px;" [innerHTML]="explanation2" class="pb-1">
+                </div>
+                <div class="font">
+                  <div id="N9" class="pb-3">
+                    <span class="pb-3">&diams;Koliko teško vam je bilo održati razinu entuzijazma u proteklih mjesec dana?
+                    </span><br>
+                    <p-radioButton name="N9" value="0" label="Uopće nije bilo teško" [(ngModel)]="N9" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N9" value="1" label="Samo mali problem" [(ngModel)]="N9" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N9" value="2" label="Popriličan problem" [(ngModel)]="N9" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N9" value="3" label="Ogroman problem" [(ngModel)]="N9" class="mr-3">
+                    </p-radioButton><br>
+                    
+                  </div>
+                </div>
+              </p-scrollPanel>
+            </p-tabPanel>
+            <p-tabPanel header="10. Pitanje" id="9">
+              <p-scrollPanel [style]="{width: '100%', height: '427px'}">
+                <div style="font-size: 22px;" [innerHTML]="explanation2" class="pb-1">
+                </div>
+                <div class="font">
+                  <div id="N10" class="pb-3">
+                      <span class="pb-3">&diams;Spavate li sami u krevetu ili u sobi</span><br>
+                    <p-radioButton name="N10" value="0" label="Sam(a) u krevetu i u sobi" [(ngModel)]="N10" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10" value="1" label="Partner spava u drugoj sobi" [(ngModel)]="N10" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10" value="2" label="Partner spava u istoj sobi ali drugom krevetu" [(ngModel)]="N10" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10" value="3" label="Partner spava u istom krevetu" [(ngModel)]="N10" class="mr-3">
+                    </p-radioButton><br><br>
+                    
+                    <p>Ako Vam partner spava u istom krevetu ili sobi pitajte ga koliko često ste u 
+                      proteklih mjesec dana...
+                    </p><br>
+                    <p class="question pb-1">a)Glasno hrkali 
+                    </p>
+                    <p-radioButton name="N10a" value="0" label="Nikad" [(ngModel)]="N10a" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10a" value="1" label="Rjeđe od jednom tjedno" [(ngModel)]="N10a" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10a" value="2" label="Jednom ili dvaput tjedno" [(ngModel)]="N10a" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10a" value="3" label="Tri ili više puta tjedno" [(ngModel)]="N10a" class="mr-3">
+                    </p-radioButton><br><br>
+    
+                    <p class="question pb-1">b)Imali dugačke prekide disanja dok ste spavali
+                    </p>
+                    <p-radioButton name="N10b" value="0" label="Nikad" [(ngModel)]="N10b" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10b" value="1" label="Rjeđe od jednom tjedno" [(ngModel)]="N10b" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10b" value="2" label="Jednom ili dvaput tjedno" [(ngModel)]="N10b" class="mr-3">
+                    </p-radioButton>Jednom ili dvaput tjedno<br>
+                    <p-radioButton name="N10b" value="3" label="Tri ili više puta tjedno" [(ngModel)]="N10b" class="mr-3">
+                    </p-radioButton><br><br>
+    
+    
+                    <p class="question pb-1">c)Imali grčeve ili trzajeve nogu dok ste spavali
+                    </p>
+                    <p-radioButton name="N10c" value="0" label="Nikad" [(ngModel)]="N10c" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10c" value="1" label="Rjeđe od jednom tjedno" [(ngModel)]="N10c" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10c" value="2" label="Jednom ili dvaput tjedno" [(ngModel)]="N10c" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10c" value="3" label="Tri ili više puta tjedno" [(ngModel)]="N10c" class="mr-3">
+                    </p-radioButton><br><br>
+    
+    
+                    <p class="question pb-1">d)Imali epizode dizorijentacije ili zbunjenosti dok ste spavali
+                    </p>
+                    <p-radioButton name="N10d" value="0" label="Nikad" [(ngModel)]="N10d" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10d" value="1" label="Rjeđe od jednom tjedno" [(ngModel)]="N10d" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10d" value="2" label="Jednom ili dvaput tjedno" [(ngModel)]="N10d" class="mr-3">
+                    </p-radioButton><br>
+                    <p-radioButton name="N10d" value="3" label="Tri ili više puta tjedno" [(ngModel)]="N10d" class="mr-3">
+                    </p-radioButton><br><br>
+    
+    
+                    <p class="question pb-1">e)Ostale nemire, molimo navedite
+                    </p>
+                    <input [(ngModel)]="N10e" name="N10e"  type="text"  pInputText /><br>
+                    <p-radioButton name="N10f" value="0" label="Nikad" [(ngModel)]="N10f" class="mr-3">
+                      </p-radioButton><br>
+                      <p-radioButton name="N10f" value="1" label="Rjeđe od jednom tjedno" [(ngModel)]="N10f" class="mr-3">
+                      </p-radioButton><br>
+                      <p-radioButton name="N10f" value="2" label="Jednom ili dvaput tjedno" [(ngModel)]="N10f" class="mr-3">
+                      </p-radioButton><br>
+                      <p-radioButton name="N10f" value="3" label="Tri ili više puta tjedno" [(ngModel)]="N10f" class="mr-3">
+                      </p-radioButton>
+    
+                  </div>
+                </div>
+              </p-scrollPanel>
+            </p-tabPanel>
+    
+
       </p-tabView>
     </p-scrollPanel>
     <a routerLink="/"><button pButton type="submit" icon="pi pi-check" label="Završi"

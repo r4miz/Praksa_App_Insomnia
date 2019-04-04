@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormularEpworthComponent } from './formular-epworth/formular-epworth.component';
 import { FormularNoseComponent } from './formular-nose/formular-nose.component';
@@ -11,10 +11,10 @@ import { TabletSimptomiComponent } from './tablet-simptomi/tablet-simptomi.compo
 import { BerlinskiUpitnikComponent } from './berlinski-upitnik/berlinski-upitnik.component';
 import { NakonComponent } from './nakon_spavanja/nakon.component';
 import { PrijeComponent } from './prije_spavanja/prije.component';
+import { FormularUjutroComponent } from './formular-ujutro/formular-ujutro.component';
+import { FormularNavecerComponent } from './formular-navecer/formular-navecer.component';
 import { TabletPittsburghSleepQualityIndexComponent } from './tablet-pittsburgh-sleep-quality-index/tablet-pittsburgh-sleep-quality-index.component';
 import { LoginComponent } from "./login/login.component";
-
-
 
 
 const routes: Routes = [
@@ -29,7 +29,9 @@ const routes: Routes = [
   { path: 'tab-simptomi-formular', component: TabletSimptomiComponent},
   { path: 'berlinski-upitnik',component: BerlinskiUpitnikComponent},
   { path: 'nakon-spavanja',component: NakonComponent},
-  { path: 'prije-spavanja', component: PrijeComponent},
+  { path: 'prije-spavanja',component: PrijeComponent},
+  { path: 'ujutro', component: FormularUjutroComponent},
+  { path: 'navecer', component: FormularNavecerComponent},
   { path: 'tab-pittsburgh-formular', component: TabletPittsburghSleepQualityIndexComponent}
 ];
 

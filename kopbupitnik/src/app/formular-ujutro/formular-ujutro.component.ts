@@ -13,6 +13,7 @@ export class FormularUjutroComponent implements OnInit {
   trece: number=null;
   cetvrto: number=null;
   peto: number=null;
+  orange: number=null;
   
   constructor() { }
 
@@ -42,8 +43,12 @@ export class FormularUjutroComponent implements OnInit {
       items[2].removeAttribute("style");
     }
 
-    if (this.cetvrto != null) {
+    if (this.cetvrto != null && this.orange!=null) {
       items[3].setAttribute("style", "background-color: darkgreen;");
+    }
+    else if (this.cetvrto!=null && this.orange==null)
+    {
+      items[3].setAttribute("style", "background-color: darkorange;");
     }
     else {
       items[3].removeAttribute("style");
@@ -54,7 +59,7 @@ export class FormularUjutroComponent implements OnInit {
     else{
       items[4].removeAttribute("style");
     }
-    console.log(items);
+    console.log(this.orange);
   }
     
 checkCetvrto(){
@@ -63,6 +68,44 @@ checkCetvrto(){
   }
   else{
     document.getElementById("cetvrtoCheck").hidden = true;
+  }
+}
+
+
+
+
+
+changeRadio() {
+  const items = document.getElementsByTagName('li');
+
+  for (let i = 0; i < arguments.length; i++) {
+
+    if (arguments[i] == 0) {
+      items[arguments[arguments.length - 1]].setAttribute('style', 'background-color: green;');
+      break;
+
+    } else {
+      let Brojac = 0;
+      for (let j = 1; j < arguments.length - 1; j++) {
+
+        if (arguments[j] == null) {
+          break;
+
+        } else {
+          if (arguments[j].length !== 0) { Brojac++; }
+        }
+      }
+
+      if (Brojac === arguments.length - 2) {
+        items[arguments[arguments.length - 1]].setAttribute('style', 'background-color: green;');
+        break;
+
+      } else {
+
+        items[arguments[arguments.length - 1]].setAttribute('style', 'background-color: darkorange;');
+        break;
+      }
+    }
   }
 }
 }

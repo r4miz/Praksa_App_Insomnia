@@ -12,6 +12,10 @@ export class FormularNavecerComponent implements OnInit {
   trece: number=null;
   cetvrto: number=null;
   peto: number=null;
+  drijem1: number=null;
+  drijem2: number=null;
+  vrijemePica: number=null;
+  kolicinaPica: number=null;
 
   constructor() { }
 
@@ -22,15 +26,33 @@ export class FormularNavecerComponent implements OnInit {
   handleChange(e) 
   {
     var items = document.getElementsByTagName("li");
-   if (this.prvo != null){
+   if (this.prvo != null && this.drijem1!=null && this.drijem2!=null){
      items[0].setAttribute("style", "background-color: darkgreen;");
+   }
+   else if(this.prvo != null && this.drijem1!=null && this.drijem2==null){
+    items[0].setAttribute("style", "background-color: darkorange;");
+   }
+   else if(this.prvo != null && this.drijem1==null && this.drijem2!=null){
+    items[0].setAttribute("style", "background-color: darkorange;");
+   }
+   else if(this.prvo != null && this.drijem1==null && this.drijem2==null){
+    items[0].setAttribute("style", "background-color: darkorange;");
    }
    else {
      items[0].removeAttribute("style");
    }
 
-    if (this.drugo != null) {
+    if (this.drugo != null && this.vrijemePica!=null && this.kolicinaPica!=null) {
       items[1].setAttribute("style", "background-color: darkgreen;");
+    }
+    else if(this.drugo!=null && this.vrijemePica==null && this.kolicinaPica!=null){
+      items[1].setAttribute("style", "background-color: darkorange;" )
+    }
+    else if(this.drugo!=null && this.vrijemePica!=null && this.kolicinaPica==null){
+      items[1].setAttribute("style", "background-color: darkorange;" )
+    }
+    else if(this.drugo!=null && this.vrijemePica==null && this.kolicinaPica==null){
+      items[1].setAttribute("style", "background-color: darkorange;" )
     }
     else {
       items[1].removeAttribute("style");
