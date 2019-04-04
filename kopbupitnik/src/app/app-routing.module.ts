@@ -12,13 +12,14 @@ import { BerlinskiUpitnikComponent } from './berlinski-upitnik/berlinski-upitnik
 import { NakonComponent } from './nakon_spavanja/nakon.component';
 import { PrijeComponent } from './prije_spavanja/prije.component';
 import { TabletPittsburghSleepQualityIndexComponent } from './tablet-pittsburgh-sleep-quality-index/tablet-pittsburgh-sleep-quality-index.component';
-
+import { LoginComponent } from "./login/login.component";
 
 
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
+  { path: 'home', component: HomeComponent},
   { path: 'epworth-ljestva', component: FormularEpworthComponent },
   { path: 'nose-formular', component: FormularNoseComponent }, 
   { path: 'stop-formular', component: FormularStopComponent },

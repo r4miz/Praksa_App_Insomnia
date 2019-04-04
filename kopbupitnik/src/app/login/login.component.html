@@ -1,23 +1,21 @@
-<form >
-    <div class="imgcontainer">
-        <img src="assets/Img/account-icon-lg.png" alt="Avatar" class="avatar"  >
-      </div>
-    
-      <div class="container">
-        <label for="username"><b>Korisničko ime: </b></label>
+<form class="large">
+  <div class="p-grid">
+    <div class="p-col-6 p-allign-center center container">
+      <div class="imgcontainer">
+        <img src="assets/nav_icon.png" alt="Avatar" class="avatar"><br>
+        <label for="username"><b>Korisničko ime: </b></label><br>
         <input type="text" placeholder="Unesite korisničko ime" name="username" required> <br>
-    
-        <label for="password"><b>Lozinka: </b></label>
+        <label for="password"><b>Lozinka: </b></label><br>
         <input type="password" placeholder="Unesite lozinku" name="password" required><br>
-    
-        <a routerLink="/HomePage"><button type="submit">Prijava</button></a>
+        <a routerLink="/home"><button type="submit"
+            class="ui-button-raised ui-button-rounded ui-button-danger">Prijava</button></a>
+      </div>
+      <div class="pl-6 paddingLeft">
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-      </div>
-    
-      <div class="container" style="background-color:#f1f1f1">
+        </label><br>
         <span class="psw">Dont have an account? <a href="#">Sign up</a></span>
       </div>
-</form> 
-
+    </div>
+  </div>
+</form>

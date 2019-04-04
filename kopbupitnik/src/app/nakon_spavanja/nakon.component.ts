@@ -37,7 +37,6 @@ import {Component, OnInit, AfterViewInit} from "@angular/core";
   // paginator begin, options: true -> hide page, false -> unhide page
   ngAfterViewInit(): void {
     var items = document.getElementsByTagName("li");
-    console.log(items.length);
     this.handleOverflowTabsAfterDivider(items, true);
   }
 

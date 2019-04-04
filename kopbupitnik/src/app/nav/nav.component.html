@@ -1,27 +1,8 @@
-<!--<p-menubar [model]="items">
-  <div class="ui-fluid">
-    <form class="inline-form">
-      <div class="ui-inputgroup">
-        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-        <input id="oib" type="text" value="" autocomplete="off" minlength="11" maxlength="11" pInputText
-        placeholder="OIB" required>
-        <span class="ui-inputgroup-addon"><i class="pi pi-lock"></i></span>
-        <input id="pwd" type="password" value="" minlength="8" pPassword placeholder="Password" required />
-        <button pButton id="login" type="button" icon="pi pi-sign-in" class="ui-button-success"></button>
-      </div>
-    </form>
-    <a routerLink="/"><img id="logo" src="assets/nav_icon.png" width="32"/></a>
-  </div>
-</p-menubar>
--->
 <div class="sidenav">
   <button type="text" class="ui-button-secondary largeButton" (click)="sidebar = true" pButton
     icon="pi pi-bars"></button>
 </div>
 <p-sidebar [(visible)]="sidebar" position="left" [style]="{width:'40em'}" dismissible>
-  <!--  
-  <a routerLink="/"><img id="logo" src="assets/nav_icon.png" width="128" /></a>
-  -->
   <div class="p-grid">
     <div class="p-col-10">
       <p-accordion>
@@ -50,22 +31,8 @@
           <div>
             <a (click)="close()" routerLink="/tab-pittsburgh-formular">Pittsburgh sleep quality index</a>
           </div>
-
-        </p-accordionTab>
-        <p-accordionTab header="Desktop Formulari">
-          <div class="pb-3">
-            <a (click)="close()" routerLink="/stop-formular">STOP upitnik</a>
-          </div>
-          <div class="pb-3">
-            <a (click)="close()" routerLink="/nose-formular">NOSE instrument</a>
-          </div>
-          <div>
-            <a (click)="close()" routerLink="/epworth-ljestva">Epworthova ljestvica pospanosti</a>
-          </div>
-
         </p-accordionTab>
       </p-accordion>
     </div>
   </div>
-
 </p-sidebar>
